@@ -1,0 +1,8 @@
+   1 qubits ->                2 amplitudes  (       0.0 GB)
+   2 qubits ->                4 amplitudes  (       0.0 GB)
+   5 qubits ->               32 amplitudes  (       0.0 GB)
+  10 qubits ->            1,024 amplitudes  (       0.0 GB)
+  20 qubits ->        1,048,576 amplitudes  (       0.0 GB)
+  30 qubits ->    1,073,741,824 amplitudes  (      17.2 GB)
+  40 qubits ->  1,099,511,627,776 amplitudes  (  17,592.2 GB)
+  50 qubits -> ~10^15 amplitudes            (~16,000 TB)

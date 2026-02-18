@@ -1,0 +1,13 @@
+Entangled (Bell Phi+):
+  00: 4976
+  01: 0
+  10: 0
+  11: 5024
+  Correlation: 1.0000
+
+Independent superpositions:
+  00: 2537
+  01: 2519
+  10: 2474
+  11: 2470
+  Correlation: 0.0028
