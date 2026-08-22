@@ -1,0 +1,15 @@
+Translate the quantum-computing claim I provide into a claim-to-decision ledger for a Python engineering team.
+
+Return six JSON-compatible records:
+- problem_contract;
+- classical_baseline;
+- quantum_experiment;
+- evidence_comparison;
+- decision;
+- learning_artifact.
+
+For every field, use one of three states: supplied, derived_with_explanation, or missing. Preserve exact evidence types such as mathematical analysis, classical exact computation, classical stochastic simulation, quantum simulator, or quantum hardware. Add source pointers for every supplied fact.
+
+The comparison must retain separate fields for task fidelity, result quality, resources, scale, access, reproducibility, and usefulness. The decision must contain a bounded action, owner, review trigger, and stop conditions. If the evidence cannot support a decision, recommend monitor or reproduce and explain why.
+
+Do not invent measurements, fill missing fields from general knowledge, or compress the result into one advantage score.

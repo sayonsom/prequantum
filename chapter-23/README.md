@@ -1,24 +1,13 @@
-# Chapter 23: Hype vs Reality
+# Chapter 23 learning artifacts
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+This directory contains the exact executable examples, AI learning prompts, and read-only review Skill printed in Chapter 23, “From Quantum Claims to Engineering Decisions.”
 
-## Code Files
+The eight examples use only the Python standard library. They build solver-independent problem contracts, classical baselines, evidence records, validators, decision gates, and portfolio manifests. They do not execute a quantum circuit, call a provider, or provide hardware evidence.
 
-| # | File | Section |
-|---|------|--------|
-| 1 | [example_01_the_quick_win.py](./example_01_the_quick_win.py) | The Quick Win |
-| 2 | [example_02_the_quantum_advantage_scorecard.py](./example_02_the_quantum_advantage_scorecard.py) | The Quantum Advantage Scorecard |
-| 3 | [example_03_the_classical_algorithm_moving_target.py](./example_03_the_classical_algorithm_moving_target.py) | The Classical Algorithm Moving Target |
-| 4 | [example_04_the_quantumgridos_benchmark_an_honest_as.py](./example_04_the_quantumgridos_benchmark_an_honest_as.py) | The QuantumGridOS Benchmark: An Honest Assessment |
-| 5 | [example_05_where_quantum_actually_wins_today.py](./example_05_where_quantum_actually_wins_today.py) | Where Quantum Actually Wins (Today) |
-| 6 | [example_06_the_investment_landscape_bubbles_and_bre.py](./example_06_the_investment_landscape_bubbles_and_bre.py) | The Investment Landscape: Bubbles and Breakthroughs |
-| 7 | [example_07_the_decision_framework_should_your_compa.py](./example_07_the_decision_framework_should_your_compa.py) | The Decision Framework: Should Your Company Invest? |
-| 8 | [example_08_what_you_should_do_right_now.py](./example_08_what_you_should_do_right_now.py) | What You Should Do Right Now |
-| 9 | [example_09__break_this.py](./example_09__break_this.py) | 🐛 Break This |
-
-## Running the Code
+Run all examples from this directory with:
 
 ```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
+for file in example_*.py; do python "$file"; done
 ```
+
+The `prompts/` directory contains the exact three copyable prompts. The `skills/quantum-advantage-evidence-reviewer/` directory contains the exact read-only Skill artifact printed in the chapter.

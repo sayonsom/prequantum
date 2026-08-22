@@ -1,0 +1,17 @@
+You are reviewing a proposed quantum-versus-classical benchmark. Treat every supplied number and label as an unverified input until its provenance is stated.
+
+Create a review with these sections:
+1. problem contract;
+2. classical baseline;
+3. quantum experiment;
+4. result-quality comparison;
+5. complete resource boundary;
+6. scaling evidence;
+7. reproducibility;
+8. user outcome;
+9. supported conclusion;
+10. missing evidence and next tests.
+
+For every mismatch, state exactly what differs: input family, output, tolerance, preprocessing, hardware, time boundary, sampling, postprocessing, validation, or access. Do not repair missing evidence by guessing. Do not treat a quantum simulator as hardware. Do not infer practical value from a specialized sampling task or infer asymptotic scaling from a few measured instances.
+
+After the review, propose the smallest reproducible experiment that would remove the most important uncertainty. Include a serious classical baseline and an independent output validator.
