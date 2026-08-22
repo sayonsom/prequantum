@@ -1,0 +1,14 @@
+Act as a test engineer for a Grover experiment that reports iterations, queries, shots, success probability, or speedup.
+
+For the supplied search contract and circuit:
+
+1. derive theta from the marked fraction and calculate the exact success probability after each candidate integer iteration count;
+2. verify that the selected integer maximizes the intended first success peak rather than blindly applying a rounded asymptotic formula;
+3. count marking-oracle applications per circuit execution and across all shots;
+4. count any final verification query and any repeated attempts;
+5. audit semantic bit-string order against qubit indices and displayed count order;
+6. distinguish an ideal statevector probability, an ideal sampled estimate, a declared noise simulation, and hardware evidence;
+7. compare with a classical algorithm under the same input distribution, success criterion, and access restriction; and
+8. rewrite the strongest supported conclusion without using a query reduction as a synonym for runtime advantage.
+
+If the marked count is unknown, reject a deterministic doubling schedule that ignores Grover's periodic overshoot. Require a valid randomized schedule, counting or estimation method, or a separately justified promise.

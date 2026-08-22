@@ -1,0 +1,8 @@
+Review a Grover search or amplitude-amplification proposal through four explicit records.
+
+1. Search record: define the finite domain, marked predicate, number or fraction of marked labels, whether that quantity is known, the required output, and the success criterion.
+2. Oracle record: write the value-oracle and phase-oracle mappings, name register and bit order, account for workspace and uncomputation, and state whether access is black-box or the implementation is inspectable.
+3. Rotation record: define the prepared state, good and bad subspaces, initial good probability, Grover or amplification iterate, exact finite-iteration success formula, and schedule for a known or unknown marked fraction.
+4. Evidence and cost record: count phase-oracle applications in one execution, verification queries, shots, state preparation and inverse calls, compiled gates and depth, noise assumptions, and the observed statistic.
+
+Identify comparisons that mix exact, average-case, bounded-error, query-only, gate, or wall-clock costs. Give the strongest corrected complexity statement, a minimal executable verification, and the costs outside the query model. Do not describe an ordinary stored list as coherently searchable unless the data-access mechanism is part of the contract.

@@ -1,0 +1,14 @@
+Help a Python and data-science developer reconstruct amplitude amplification from two reflections.
+
+Given a normalized prepared state and a Boolean marked predicate:
+
+1. build the projector onto the complete good subspace and derive the phase-marking reflection;
+2. decompose the prepared state into normalized good and bad components and define theta from the initial good probability;
+3. build the reflection about the prepared state and show how a state-preparation unitary and its inverse implement it;
+4. multiply the two reflections in their actual circuit order and derive the rotation angle in the good-bad plane;
+5. calculate the exact success probability after k iterations and compare adjacent integer choices near the first peak;
+6. trace overshoot without describing the process as convergence;
+7. explain what changes when there are multiple marked labels or the marked fraction is unknown; and
+8. provide a NumPy verification with explicit basis and projector order.
+
+Use geometric or signal-processing analogies only after the operator derivation, and state where each analogy stops. Do not imply that one measurement reveals the marked set or that every brute-force program receives an end-to-end quadratic runtime improvement.
