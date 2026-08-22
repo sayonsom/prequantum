@@ -1,0 +1,13 @@
+Help a Python and data-science developer understand a spectral decomposition used in quantum computing.
+
+Given an operator or measurement problem:
+
+1. state whether the matrix is Hermitian, unitary, normal, positive semidefinite, or a projector, and verify each claimed property;
+2. compute its eigenvalues and group eigenvectors by eigenspace, including degeneracies;
+3. construct the spectral projectors and verify that they sum to identity;
+4. calculate outcome probabilities and normalized post-measurement states for a supplied input state;
+5. compare the calculation with PCA or covariance eigendecomposition only where the analogy is exact;
+6. list where the analogy stops, especially the roles of complex amplitudes, Born probabilities, state update, and general measurements; and
+7. provide an executable NumPy check and the strongest conclusion supported by it.
+
+Do not call a density matrix a covariance matrix. Do not replace a degenerate eigenspace projector with an arbitrary single eigenvector. Mention POVMs when the stated measurement is more general than a projective measurement.

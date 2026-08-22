@@ -1,29 +1,23 @@
-# Chapter 09: The Math Deepens
+# Chapter 9: The Math Deepens
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+These artifacts support the revised Chapter 9 manuscript. Each Python file is a standalone NumPy experiment with assertions. The prompt files and local Skill are copied exactly into the manuscript.
 
-## Code Files
+## Python examples
 
-| # | File | Section |
-|---|------|--------|
-| 1 | [example_01_the_quick_win.py](./example_01_the_quick_win.py) | The Quick Win |
-| 2 | [example_02_vector_spaces_the_set_of_all_possible_st.py](./example_02_vector_spaces_the_set_of_all_possible_st.py) | Vector Spaces: The Set of All Possible States |
-| 3 | [example_03_dimension_why_2n_changes_everything.py](./example_03_dimension_why_2n_changes_everything.py) | Dimension: Why 2^n Changes Everything |
-| 4 | [example_04_basis_what_makes_a_set_of_vectors_a_basi.py](./example_04_basis_what_makes_a_set_of_vectors_a_basi.py) | Basis: What Makes a Set of Vectors a Basis |
-| 5 | [example_05_change_of_basis_seeing_the_same_state_di.py](./example_05_change_of_basis_seeing_the_same_state_di.py) | Change of Basis: Seeing the Same State Differently |
-| 6 | [example_06_change_of_basis_seeing_the_same_state_di.py](./example_06_change_of_basis_seeing_the_same_state_di.py) | Change of Basis: Seeing the Same State Differently |
-| 7 | [example_07_the_y_basis_and_the_bloch_spheres_three.py](./example_07_the_y_basis_and_the_bloch_spheres_three.py) | The Y-Basis and the Bloch Sphere's Three Axes |
-| 8 | [example_08_the_y_basis_and_the_bloch_spheres_three.py](./example_08_the_y_basis_and_the_bloch_spheres_three.py) | The Y-Basis and the Bloch Sphere's Three Axes |
-| 9 | [example_09_the_outer_product_building_operators_fro.py](./example_09_the_outer_product_building_operators_fro.py) | The Outer Product: Building Operators from States |
-| 10 | [example_10_the_completeness_relation_why_projectors.py](./example_10_the_completeness_relation_why_projectors.py) | The Completeness Relation: Why Projectors Sum to Identity |
-| 11 | [example_11_hermitian_matrices_what_you_can_measure.py](./example_11_hermitian_matrices_what_you_can_measure.py) | Hermitian Matrices: What You Can Measure |
-| 12 | [example_12_unitary_matrices_what_you_can_do.py](./example_12_unitary_matrices_what_you_can_do.py) | Unitary Matrices: What You Can Do |
-| 13 | [example_13_the_spectral_decomposition_putting_it_al.py](./example_13_the_spectral_decomposition_putting_it_al.py) | The Spectral Decomposition: Putting It All Together |
-| 14 | [example_14_break_this.py](./example_14_break_this.py) | Break This |
+1. `example_01_separate_state_from_coordinates.py`
+2. `example_02_test_the_ambient_space_and_state_set.py`
+3. `example_03_build_a_tensor_product_dimension_ladder.py`
+4. `example_04_extract_coordinates_in_a_complex_basis.py`
+5. `example_05_compare_xyz_bases_and_expectations.py`
+6. `example_06_build_projectors_from_outer_products.py`
+7. `example_07_classify_common_quantum_operators.py`
+8. `example_08_measure_degenerate_eigenspaces.py`
 
-## Running the Code
+## AI learning artifacts
 
-```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
-```
+- `prompts/01_audit_an_active_or_passive_basis_claim.txt`
+- `prompts/02_break_a_transpose_or_adjoint_derivation.txt`
+- `prompts/03_translate_a_spectral_decomposition_analogy.txt`
+- `skills/quantum-linear-algebra-reviewer/SKILL.md`
+
+Run an example with `python example_01_separate_state_from_coordinates.py`. The examples require NumPy and deliberately use complex-valued test cases where an ordinary transpose would conceal an error.

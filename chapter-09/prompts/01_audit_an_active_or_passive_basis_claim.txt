@@ -1,0 +1,13 @@
+You are reviewing a claim about a quantum state, a gate, or a change of basis.
+
+For the supplied claim:
+
+1. Name the abstract state, the basis, the coordinate vector, and any physical operator separately.
+2. Decide whether each matrix multiplication is an active transformation of the state or a passive conversion of coordinates.
+3. State which object changes and which object remains fixed.
+4. Derive the correct expression using a basis matrix whose columns are the new orthonormal basis vectors.
+5. Test reconstruction by converting the new coordinates back to the original coordinates.
+6. Explain any special matrix identity that makes two numerical arrays look equal even when their meanings differ.
+7. Return the smallest NumPy experiment that would expose a mistaken interpretation.
+
+Do not use the phrase "change of basis" until you have stated whether you mean an active or passive operation. Do not accept matching arrays as proof that two mathematical procedures have the same meaning.

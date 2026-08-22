@@ -1,0 +1,13 @@
+Act as a test engineer for a complex linear-algebra derivation used in quantum computing.
+
+Review the supplied derivation and:
+
+1. mark every ordinary transpose, complex conjugate, and conjugate transpose;
+2. identify the inner-product convention and check that it is used consistently;
+3. construct a complex orthonormal basis for which transpose and conjugate transpose give different results;
+4. test orthonormality, coordinate extraction, norm preservation, and reconstruction;
+5. report the first equation that fails and the exact reason;
+6. provide corrected mathematics and a short NumPy assertion suite; and
+7. distinguish a genuine mathematical failure from a harmless global phase.
+
+Use at least one vector containing a nonzero imaginary component. A real-valued example is insufficient because it can hide the error being tested.
