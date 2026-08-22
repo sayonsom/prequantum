@@ -1,29 +1,23 @@
-# Chapter 08: Quantum Information Essentials
+# Chapter 8: Quantum Information Essentials
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+These artifacts support the revised Chapter 8 manuscript. Each Python file is a standalone learning example with assertions. The prompt files and local Skill are copied exactly into the manuscript.
 
-## Code Files
+## Python examples
 
-| # | File | Section |
-|---|------|--------|
-| 1 | [example_01_the_quick_win.py](./example_01_the_quick_win.py) | The Quick Win |
-| 2 | [example_02_the_quick_win.py](./example_02_the_quick_win.py) | The Quick Win |
-| 3 | [example_03_the_no_cloning_theorem.py](./example_03_the_no_cloning_theorem.py) | The No-Cloning Theorem |
-| 4 | [example_04_the_no_cloning_theorem.py](./example_04_the_no_cloning_theorem.py) | The No-Cloning Theorem |
-| 5 | [example_05_the_no_cloning_family_approximate_clonin.py](./example_05_the_no_cloning_family_approximate_clonin.py) | The No-Cloning Family: Approximate Cloning and No-Deleting |
-| 6 | [example_06_the_no_cloning_family_approximate_clonin.py](./example_06_the_no_cloning_family_approximate_clonin.py) | The No-Cloning Family: Approximate Cloning and No-Deleting |
-| 7 | [example_07_quantum_teleportation_the_protocol.py](./example_07_quantum_teleportation_the_protocol.py) | Quantum Teleportation: The Protocol |
-| 8 | [example_08_quantum_teleportation_the_protocol.py](./example_08_quantum_teleportation_the_protocol.py) | Quantum Teleportation: The Protocol |
-| 9 | [example_09_superdense_coding_two_bits_one_qubit.py](./example_09_superdense_coding_two_bits_one_qubit.py) | Superdense Coding: Two Bits, One Qubit |
-| 10 | [example_10_superdense_coding_two_bits_one_qubit.py](./example_10_superdense_coding_two_bits_one_qubit.py) | Superdense Coding: Two Bits, One Qubit |
-| 11 | [example_11_fidelity_how_close_are_two_states.py](./example_11_fidelity_how_close_are_two_states.py) | Fidelity: How Close Are Two States? |
-| 12 | [example_12_fidelity_how_close_are_two_states.py](./example_12_fidelity_how_close_are_two_states.py) | Fidelity: How Close Are Two States? |
-| 13 | [example_13_fidelity_how_close_are_two_states.py](./example_13_fidelity_how_close_are_two_states.py) | Fidelity: How Close Are Two States? |
-| 14 | [example_14_break_this.py](./example_14_break_this.py) | Break This |
+1. `example_01_test_a_basis_label_copier.py`
+2. `example_02_prove_no_cloning_with_inner_products.py`
+3. `example_03_trace_teleportation_branches.py`
+4. `example_04_verify_dynamic_teleportation.py`
+5. `example_05_check_no_signalling.py`
+6. `example_06_run_superdense_coding.py`
+7. `example_07_compare_fidelity_and_trace_distance.py`
+8. `example_08_test_global_phase_in_superdense_coding.py`
 
-## Running the Code
+## AI learning artifacts
 
-```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
-```
+- `prompts/01_trace_a_teleportation_protocol.txt`
+- `prompts/02_audit_quantum_resource_accounting.txt`
+- `prompts/03_review_a_state_similarity_claim.txt`
+- `skills/quantum-information-protocol-reviewer/SKILL.md`
+
+The examples use explicit semantic names for phase and flip bits. Qiskit count strings are displayed in descending classical-bit order, so the superdense-coding example parses the display before comparing it with the semantic message.

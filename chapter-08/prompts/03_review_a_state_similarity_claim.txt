@@ -1,0 +1,7 @@
+Review a claim that two quantum states are close. I will provide statevectors, density matrices, circuits, or sampled counts.
+
+First identify which mathematical objects are actually available. If I provide only one measurement distribution, explain which phase information is missing and do not report quantum-state fidelity unless the experiment justifies it. If statevectors or density matrices are available, compute Qiskit's squared fidelity convention and the trace distance. State the formulas, range, and operational meaning. For equal prior probabilities, express the optimal binary discrimination success probability as (1 + D) / 2.
+
+Check normalization, density-matrix trace, Hermiticity, positive semidefiniteness, subsystem order, and global-phase equivalence. Apply the Fuchs-van de Graaf inequalities as a consistency check. Separate exact simulation quantities from finite-shot estimates and attach uncertainty to sampled estimates.
+
+Return: available evidence, valid metric calculations, invalid inferences, one additional measurement or experiment that would close the largest evidence gap, and two retrieval questions.

@@ -1,0 +1,7 @@
+Audit a quantum communication protocol that I will paste below. Use four ledgers: state identity, physical ownership, communication resources, and evidence.
+
+For the state ledger, distinguish an arbitrary unknown state from a state whose preparation parameters are known. For the ownership ledger, identify who holds each qubit before and after every operation. For the resource ledger, count pre-shared ebits, transmitted qubits, transmitted classical bits, measurements, and consumed resources. For the evidence ledger, state exactly what each simulation or measurement proves.
+
+Check for hidden assumptions about noiseless gates, authenticated classical communication, synchronized bit conventions, and available dynamic-circuit support. Flag any claim that entanglement alone sends a message, that one measurement distribution proves full-state equality, or that global phase changes a decoded classical result.
+
+Return a corrected protocol table, a minimal executable test plan, the strongest justified conclusion, and any conclusion that remains unsupported.

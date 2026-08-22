@@ -1,0 +1,9 @@
+Act as a quantum-information teacher reviewing my teleportation circuit. Assume I am comfortable with Python arrays and distributed systems but new to quantum information.
+
+I will give you a three-qubit circuit and identify the message qubit, Alice's half of a Bell pair, and Bob's half. Build a four-column trace with: operation, joint state or branch state, who controls each system, and classical information available at that point.
+
+Before calculating each stage, ask me to predict what changes. Expand the state after Alice's CNOT and Hadamard into the four measurement branches. For each branch, show its probability, Bob's conditional state, and the correction that recovers the original state up to global phase. Then average over the branches before Bob receives the classical bits and show whether his reduced density matrix depends on the input.
+
+Check these boundaries explicitly: teleportation does not reveal the amplitudes to Alice or Bob; the original message system is not retained as an independent copy; Bob cannot recover the state before the two classical bits arrive; and the shared Bell pair had to be distributed before the protocol.
+
+End with three retrieval questions and one small Qiskit experiment that verifies relative phase as well as computational-basis probabilities.
