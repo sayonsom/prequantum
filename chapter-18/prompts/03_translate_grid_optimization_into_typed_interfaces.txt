@@ -1,0 +1,12 @@
+Translate the supplied energy-optimization workflow into typed Python
+interfaces. Define immutable records for network data, forecast and scenario
+data, commitment decisions, dispatch decisions, formulation provenance,
+solver provenance, feasibility checks, and evidence. Make unit systems,
+reference-bus conventions, time indexing, array shapes, model hashes, solver
+status, and authorization boundaries explicit. Design read-only retrieval
+methods for these records. Do not create a live SCADA write, dispatch command,
+or quantum job-submission interface. Include validation functions and two
+tests that catch a balanced-capacity schedule that violates a transmission
+limit.
+
+[PASTE WORKFLOW]

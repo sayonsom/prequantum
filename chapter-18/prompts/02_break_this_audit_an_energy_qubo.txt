@@ -1,0 +1,11 @@
+Act as a skeptical reviewer of the following energy-system QUBO. Reconstruct
+the original constrained problem before inspecting the encoding. Identify the
+meaning and units of every binary variable, decode every slack or surplus bit,
+expand each penalty algebraically, and enumerate the complete state space when
+it is small enough. Report the lowest feasible objective, the lowest
+infeasible energy, the strict penalty threshold, every tie at the threshold,
+and whether the returned candidate still needs continuous dispatch, network,
+contingency, or operational validation. Separate formulation evidence from
+sampler evidence. Here is the model and code:
+
+[PASTE MODEL AND CODE]

@@ -1,0 +1,8 @@
+I am a Python and data-science developer learning energy-system optimization.
+Teach me to distinguish these five records: physical grid, planning problem,
+mathematical formulation, solver run, and evidence. Use one three-bus example.
+For every array, state its shape, units, sign convention, and relationship to
+the preceding record. Pause after each record and ask me to reconstruct it
+from memory. Do not claim that a QUBO, QAOA circuit, or simulator result solves
+continuous dispatch or grid security unless the demonstrated workflow includes
+those checks.
