@@ -1,0 +1,16 @@
+Translate a quantum-classical workflow into typed Python interfaces and JSON-compatible schemas.
+
+Create separate types for:
+
+1. ExperimentIntent;
+2. ServiceRequest;
+3. ExecutionPlan;
+4. ServiceJob and append-only JobEvent;
+5. ProviderJobSnapshot;
+6. RawResultRecord;
+7. DerivedResultRecord;
+8. OperationsSummary.
+
+For each type, identify required fields, immutable identifiers, timestamps, hashes, provider-specific extension fields, redacted fields, and validation rules. Define a state-transition function that rejects illegal transitions. Define an idempotent submit operation that returns the existing service job when the same key and request hash are repeated, and raises a conflict when the key is reused with different input.
+
+Then propose five read-only MCP tools for inspecting these records and one separately authorized submission service. Include error responses for unknown, stale, incomplete, unauthorized, and internally inconsistent records. Use provider-neutral names and do not include secrets or live credentials in examples.

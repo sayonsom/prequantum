@@ -1,0 +1,17 @@
+Audit the following incident as a distributed-systems and quantum-evidence problem.
+
+A client sent one optimization request. The API timed out while calling a quantum provider, so a worker retried twice. Three provider jobs later appeared. The service returned the first completed result, deleted the other raw outputs, and wrote “hardware confirmed the optimum” in the report.
+
+Produce these sections:
+
+1. timeline with explicit known and unknown facts;
+2. request, plan, job, result, and operations records that should have existed;
+3. duplicate-submission mechanism;
+4. idempotency and reconciliation design;
+5. evidence destroyed or made ambiguous;
+6. unsupported scientific or optimization claims;
+7. bounded corrected conclusion;
+8. tests that would reproduce the service failure without calling a real provider;
+9. safe remediation steps separated from any job cancellation or resubmission.
+
+Do not request credentials, submit a job, assume provider behavior that is not supplied, or treat a completed provider job as proof of application feasibility or optimality.

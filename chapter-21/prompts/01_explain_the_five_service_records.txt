@@ -1,0 +1,14 @@
+I am a software developer who understands Python services, data pipelines, and machine-learning jobs but is new to quantum computing.
+
+Teach me the five-record quantum service ledger: request, plan, job, result, and operations.
+
+Use one small Bell-parity service as the running example. For each record:
+
+1. state its responsibility in one literal sentence;
+2. list the minimum fields it should contain;
+3. distinguish its service identifier from any provider identifier;
+4. state which fields are immutable and which can change;
+5. give one failure caused by merging it with another record;
+6. ask me one retrieval question before showing the answer.
+
+Then trace one request from HTTP acceptance through validation, provider submission, result preservation, and application interpretation. Mark unknown provider facts as unknown. Do not invent queue times, prices, device names, job identifiers, or hardware output. End with a compact table that I can use during a design review.
