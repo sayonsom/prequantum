@@ -1,0 +1,12 @@
+Translate the Chapter 16 optimization workflow into typed software interfaces for a Python service. Preserve five separate records:
+
+1. decision variables and their order;
+2. objective terms and minimization or maximization sense;
+3. feasibility constraints, slack encodings, and penalty rationale;
+4. solver encoding and execution configuration; and
+5. evidence, including decoded validation and classical baselines.
+
+Design Python dataclasses or Pydantic models for these records. Include explicit fields for QUBO convention, constant offset, bit order, coefficient scale, solver seed, shots, hardware or simulator provenance, timing scope, and unsupported claims. Add validators that detect non-binary decoded assignments, duplicate pair coefficients, missing slack bounds, a penalty without a stated bound or sweep, and a quantum result that has not been checked against the original constraints.
+
+Then propose a read-only MCP interface with narrowly scoped tools for retrieving a problem specification, formulation, run record, and baseline result. Keep mutation and live job submission outside the interface. Explain when a local Skill is sufficient, when the MCP server is useful, and when a plugin should package both. Do not claim that any proposed tool is already deployed.
+

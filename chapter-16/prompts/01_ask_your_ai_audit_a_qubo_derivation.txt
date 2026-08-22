@@ -1,0 +1,16 @@
+I am reviewing the generator-selection QUBO from Chapter 16. The direct objective is
+
+    C(x) = [3, 4, 8] @ x + lambda * ([1, 2, 3] @ x - 3)^2,
+
+where x is a three-entry binary vector and lambda = 10.
+
+Use the upper-triangular convention
+
+    E(x) = constant + linear @ x + x @ quadratic @ x,
+
+where the diagonal of `quadratic` is zero and each pair coefficient is stored once above the diagonal. Expand the square one algebraic step at a time, derive `constant`, `linear`, and `quadratic`, and enumerate all eight assignments. Verify that the direct and compiled energies agree for every assignment.
+
+Then repeat the derivation for the alternative symmetric convention in which each off-diagonal coefficient is split equally between Q[i,j] and Q[j,i]. Explain why copying an upper-triangular pair coefficient into both positions without halving it doubles the interaction.
+
+Do not discuss quantum advantage. Finish with three unit tests that would detect a convention mismatch.
+

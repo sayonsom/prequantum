@@ -1,0 +1,18 @@
+The following program claims to evaluate E(x) = 3*x0 + 4*x1 + 5*x0*x1 for x = [1,1]:
+
+    import numpy as np
+
+    x = np.array([1.0, 1.0])
+    Q = np.array([
+        [3.0, 5.0],
+        [5.0, 4.0],
+    ])
+    print(x @ Q @ x)
+
+The intended result is 12, but the program returns 17. Diagnose the error as a QUBO storage-convention bug rather than as a NumPy bug. Provide two independent repairs:
+
+1. an upper-triangular matrix that stores the pair coefficient once; and
+2. a symmetric matrix that splits the pair coefficient between the mirrored entries.
+
+For each repair, enumerate all four binary assignments and compare the matrix result with the direct polynomial. Add a validation function that rejects an input when its declared convention and stored coefficients disagree. State why a constant offset would not change the minimizing assignment even though it changes every reported energy.
+
