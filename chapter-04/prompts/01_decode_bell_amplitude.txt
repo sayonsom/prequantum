@@ -1,0 +1,19 @@
+Context:
+I am a Python developer learning Dirac notation. Use the Chapter 3 convention in which two-qubit coordinates are ordered 00, 01, 10, 11, the first tensor factor is the left displayed bit, and CNOT uses the left bit as control.
+
+Task:
+Decode the expression <11| CNOT (H tensor I) |00> without skipping intermediate objects.
+
+Required output:
+1. A typed ledger for every ket, bra, scalar, and operator.
+2. The dimension and NumPy shape of every object.
+3. The arrays for |00>, (H tensor I)|00>, and CNOT(H tensor I)|00>.
+4. The final complex amplitude and its squared magnitude.
+5. A one-sentence statement of the measurement model under which that squared magnitude is a probability.
+6. An independently executable NumPy check using np.vdot for the final inner product.
+
+Self-check:
+Verify normalization after both transformations. Verify that the final amplitude is 1/sqrt(2), not one half, and that its squared magnitude is one half. Do not reverse the displayed-bit convention.
+
+Stopping boundary:
+Stop after the scalar, probability, and executable check. Do not introduce density matrices, noise, or hardware execution.

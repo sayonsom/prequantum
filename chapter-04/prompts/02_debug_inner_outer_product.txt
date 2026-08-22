@@ -1,0 +1,25 @@
+Context:
+I am reviewing a NumPy translation of Dirac notation. The vectors are normalized one-dimensional complex arrays.
+
+Faulty code and claims:
+    inner = np.dot(a, b)
+    outer = np.outer(a, b)
+    assert np.isscalar(outer)
+    print("|a><b| is the probability that b is measured as a")
+    print("Every outer product is a projector")
+
+Task:
+Diagnose every mathematical and NumPy error. Rewrite the code for <a|b>, |a><b|, and the normalized projector |a><a|.
+
+Required output:
+1. A table with expression, object kind, expected shape, corrected NumPy code, and physical scope.
+2. A complex-valued test case that fails if conjugation is omitted.
+3. An idempotence test showing that |a><a| is a projector.
+4. A counterexample showing that a general |a><b| need not be a projector.
+5. A Born-rule statement that separates the inner-product amplitude from its squared magnitude.
+
+Self-check:
+Use np.vdot(a, b) for the vector inner product and np.outer(a, b.conj()) for the outer product. Require normalization before calling |a><a| a rank-one projector representing an outcome.
+
+Stopping boundary:
+Stop after corrected code, tests, and scope statements. Do not infer anything about a device or experiment.

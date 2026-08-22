@@ -1,0 +1,19 @@
+Context:
+I understand Python type hints, array shapes, generic types, function composition, and immutable value objects. I am learning Dirac notation for finite-dimensional pure states and operators.
+
+Task:
+Build a typed pseudocode model for Ket[N], Bra[N], Scalar, and Operator[N]. Include inner product, outer product, tensor product, operator application, and operator composition.
+
+Required output:
+1. Type signatures for all five operations.
+2. One valid and one invalid dimension example for each operation.
+3. A right-to-left evaluation trace for <a|U|b>.
+4. A shape trace for (H tensor I)|00>.
+5. A boundary list explaining why the analogy does not model normalization by itself, global-phase equivalence, measurement semantics, physical implementability, or subsystem bit ordering.
+6. One short example in which two different arrays represent the same physical pure state because they differ only by global phase.
+
+Self-check:
+Do not describe a ket as a mutable runtime object, an inner product as automatically being a probability, or every square matrix as a valid quantum gate.
+
+Stopping boundary:
+Stop after the typed model, examples, and boundary list. Do not design a compiler or symbolic algebra system.
