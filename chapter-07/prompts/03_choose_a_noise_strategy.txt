@@ -1,0 +1,21 @@
+Help me choose a noise-management strategy for a quantum experiment. Begin by restating the target quantity, because mitigation must be evaluated against a specific observable or distribution.
+
+Classify each proposed action as one of:
+- circuit and layout improvement
+- error suppression
+- measurement mitigation
+- zero-noise extrapolation
+- probabilistic error cancellation
+- quantum error correction
+
+For each applicable action, explain:
+1. which error mechanism it addresses;
+2. which assumption it relies on;
+3. its qubit, shot, calibration, and runtime overhead;
+4. one validation or falsification check;
+5. one condition under which it can make the answer worse.
+
+Prefer the least expensive method that addresses the dominant diagnosed error. Do not promise that mitigation improves every circuit. End with a small experiment matrix that compares an untreated baseline with one intervention at a time.
+
+Experiment description:
+[PASTE CIRCUIT, BACKEND PROPERTIES, OBSERVABLE, AND BUDGET]

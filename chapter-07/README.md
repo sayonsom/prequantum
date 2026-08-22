@@ -1,27 +1,23 @@
-# Chapter 07: Noise Errors and Why Quantum is Hard
+# Chapter 7: Noise and Errors
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+These artifacts support the revised Chapter 7 manuscript. Each Python file is a standalone, deterministic learning example. The prompt files and local Skill are copied exactly into the manuscript.
 
-## Code Files
+## Python examples
 
-| # | File | Section |
-|---|------|--------|
-| 1 | [example_01_the_quick_win.py](./example_01_the_quick_win.py) | The Quick Win |
-| 2 | [example_02_what_goes_wrong_a_taxonomy_of_quantum_er.py](./example_02_what_goes_wrong_a_taxonomy_of_quantum_er.py) | What Goes Wrong: A Taxonomy of Quantum Errors |
-| 3 | [example_03_t1_and_t2_how_fast_qubits_die.py](./example_03_t1_and_t2_how_fast_qubits_die.py) | T1 and T2: How Fast Qubits Die |
-| 4 | [example_04_t1_and_t2_how_fast_qubits_die.py](./example_04_t1_and_t2_how_fast_qubits_die.py) | T1 and T2: How Fast Qubits Die |
-| 5 | [example_05_gate_errors_death_by_a_thousand_cuts.py](./example_05_gate_errors_death_by_a_thousand_cuts.py) | Gate Errors: Death by a Thousand Cuts |
-| 6 | [example_06_gate_errors_death_by_a_thousand_cuts.py](./example_06_gate_errors_death_by_a_thousand_cuts.py) | Gate Errors: Death by a Thousand Cuts |
-| 7 | [example_07_the_error_budget_how_deep_can_your_circu.py](./example_07_the_error_budget_how_deep_can_your_circu.py) | The Error Budget: How Deep Can Your Circuits Go? |
-| 8 | [example_08_density_matrices_a_preview.py](./example_08_density_matrices_a_preview.py) | Density Matrices: A Preview |
-| 9 | [example_09_error_mitigation_fighting_noise_without.py](./example_09_error_mitigation_fighting_noise_without.py) | Error Mitigation: Fighting Noise Without Error Correction |
-| 10 | [example_10_error_mitigation_fighting_noise_without.py](./example_10_error_mitigation_fighting_noise_without.py) | Error Mitigation: Fighting Noise Without Error Correction |
-| 11 | [example_11_error_mitigation_fighting_noise_without.py](./example_11_error_mitigation_fighting_noise_without.py) | Error Mitigation: Fighting Noise Without Error Correction |
-| 12 | [example_12_break_this.py](./example_12_break_this.py) | Break This |
+1. `example_01_compare_ideal_and_noisy_counts.py`
+2. `example_02_inspect_error_visibility.py`
+3. `example_03_measure_t1_t2_signatures.py`
+4. `example_04_compare_coherent_and_stochastic_error.py`
+5. `example_05_track_density_matrix_purity.py`
+6. `example_06_estimate_an_error_budget.py`
+7. `example_07_calibrate_readout_error.py`
+8. `example_08_extrapolate_to_zero_noise.py`
 
-## Running the Code
+## AI learning artifacts
 
-```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
-```
+- `prompts/01_diagnose_unexpected_counts.txt`
+- `prompts/02_audit_a_noise_model.txt`
+- `prompts/03_choose_a_noise_strategy.txt`
+- `skills/quantum-noise-experiment-reviewer/SKILL.md`
+
+The chapter intentionally does not assign live backend calibration values to named processors. Device properties drift and should be inspected at execution time through a backend `Target` or a future live-data MCP.

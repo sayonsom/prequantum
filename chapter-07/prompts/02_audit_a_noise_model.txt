@@ -1,0 +1,22 @@
+Audit the following quantum noise model for technical and experimental validity.
+
+Return a table with these columns:
+- model component
+- mathematical channel or probability convention
+- operation and qubits affected
+- evidence source
+- assumption or limitation
+- validation experiment
+
+Check at least the following:
+1. Probabilities are normalized and use the convention expected by the SDK.
+2. T1, T2, and instruction duration use consistent units, with 0 < T2 <= 2*T1 for the thermal-relaxation model.
+3. Readout-error matrix rows and columns are interpreted correctly.
+4. The circuit is compiled to operations named in the noise model.
+5. Correlation, leakage, crosstalk, drift, and non-Markovian behavior are not claimed to be represented unless they actually are.
+6. Numerical parameters are labeled as measured values, illustrative assumptions, or fitted values.
+
+Do not call a convenient simulator model realistic without supporting calibration data.
+
+Noise model and circuit:
+[PASTE MODEL AND CIRCUIT]
