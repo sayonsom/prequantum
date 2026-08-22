@@ -1,21 +1,41 @@
-# Chapter 19: Quantum Cryptography
+# Chapter 19: Quantum Cryptography and Post-Quantum Security
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+These are the exact companion artifacts for the provisionally revised Chapter
+19 of *Pre Quantum: Quantum Computing for Software Developers*.
 
-## Code Files
+## Python examples
 
-| # | File | Section |
-|---|------|--------|
-| 1 | [example_01_the_quick_win.py](./example_01_the_quick_win.py) | The Quick Win |
-| 2 | [example_02_bb84_quantum_key_distribution.py](./example_02_bb84_quantum_key_distribution.py) | BB84: Quantum Key Distribution |
-| 3 | [example_03_the_shor_threat_whats_actually_at_risk.py](./example_03_the_shor_threat_whats_actually_at_risk.py) | The Shor Threat: What's Actually at Risk |
-| 4 | [example_04_post_quantum_cryptography_the_nist_stand.py](./example_04_post_quantum_cryptography_the_nist_stand.py) | Post-Quantum Cryptography: The NIST Standards |
-| 5 | [example_05_what_developers_should_do_right_now.py](./example_05_what_developers_should_do_right_now.py) | What Developers Should Do Right Now |
-| 6 | [example_06_break_this.py](./example_06_break_this.py) | Break This |
+| Example | Artifact | Purpose |
+| --- | --- | --- |
+| 19.1 | `example_01_audit_factoring_and_period_finding.py` | Separate trial factoring, exhaustive order finding, and Shor post-processing. |
+| 19.2 | `example_02_prepare_measure_and_sift_bb84.py` | Model the ideal prepare, measure, and sift portion of BB84. |
+| 19.3 | `example_03_measure_intercept_resend_qber.py` | Estimate intercept-resend QBER with confidence intervals. |
+| 19.4 | `example_04_calculate_sampling_detection_probability.py` | Calculate the probability that a revealed sample detects errors. |
+| 19.5 | `example_05_verify_toy_lwe_correctness.py` | Inspect modular noise and decoding in an insecure toy LWE construction. |
+| 19.6 | `example_06_validate_a_standards_registry.py` | Distinguish final NIST standards from selected algorithms. |
+| 19.7 | `example_07_prioritize_a_cryptographic_inventory.py` | Prioritize a small inventory without collecting key material. |
+| 19.8 | `example_08_build_a_migration_evidence_record.py` | Build a hash-addressed, non-authorizing migration evidence record. |
 
-## Running the Code
+## AI-practice artifacts
+
+- `prompts/01_explain_the_five_security_records.txt`
+- `prompts/02_break_this_audit_a_bb84_claim.txt`
+- `prompts/03_translate_pqc_migration_into_typed_interfaces.txt`
+
+## Skill artifact
+
+- `skills/cryptographic-migration-evidence-reviewer/SKILL.md`
+
+## Environment used for the chapter audit
+
+- Python 3.14.4
+- NumPy 2.4.2
+- No cryptographic library is used by these teaching programs.
+- Examples 19.2 through 19.5 are explanatory models and are not suitable for
+  creating keys or protecting information.
+
+Run a local example from this directory with:
 
 ```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
+python example_01_audit_factoring_and_period_finding.py
 ```

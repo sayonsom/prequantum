@@ -1,0 +1,8 @@
+Translate a post-quantum cryptography migration into typed software interfaces
+for a Python engineering team. Define immutable models for CryptoAsset,
+ThreatAssumption, StandardProfile, MigrationExperiment, and EvidenceRecord.
+Show validation rules and state transitions from discovered to reviewed,
+tested, approved, deployed, and retired. Keep discovery read-only, never store
+private key material, and separate a successful staging test from production
+authorization. Include pseudocode for five read-only MCP tools and identify the
+human approvals required before any configuration or key lifecycle change.

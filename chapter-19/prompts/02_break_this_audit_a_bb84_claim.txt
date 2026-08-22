@@ -1,0 +1,9 @@
+Audit the following claim: "A BB84 simulation produced zero errors, so the
+resulting key is unconditionally secure." Build a claim-evidence table. Check
+the channel model, authenticated classical channel, sifting, parameter
+estimation, error correction, privacy amplification, finite-key effects,
+device assumptions, side channels, composable security definition, and key
+handling. Identify what a prepare-and-measure simulation can demonstrate and
+what it cannot demonstrate. Propose the smallest corrected experiment and a
+literal conclusion that the evidence supports. Do not describe zero QBER as
+proof that no adversary exists.

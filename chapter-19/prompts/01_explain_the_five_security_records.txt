@@ -1,0 +1,8 @@
+I am a Python developer who understands APIs, typed data models, tests, and
+hashes, but I am new to quantum security. Teach me to reason with five separate
+records: asset and protocol, threat and assumptions, primitive and parameters,
+deployment and migration, and evidence. Use one TLS-like example. For each
+record, give its fields, invariants, producer, consumer, and failure modes.
+Distinguish facts established by mathematics, facts established by a published
+standard, facts measured in a particular implementation, and forecasts. End
+with five retrieval questions and do not answer them until after a divider.
