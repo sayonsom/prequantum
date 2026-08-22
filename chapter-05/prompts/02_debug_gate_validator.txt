@@ -1,0 +1,22 @@
+Context:
+The function below is intended to validate a deterministic closed-system quantum gate and then test whether a proposed native decomposition equals a target gate.
+
+Buggy code:
+def valid_gate(matrix):
+    identity = np.eye(matrix.shape[0])
+    return np.allclose(matrix @ matrix.conj().T, identity)
+
+def same_gate(candidate, target):
+    return np.allclose(np.abs(candidate), np.abs(target))
+
+Task:
+Find the conceptual and implementation defects. Repair both functions and demonstrate failures that the original functions miss.
+
+Required output:
+1. Checks for array rank, nonempty square shape, finite complex entries, and unitarity with an explicit tolerance.
+2. A matrix-equivalence test up to one common global phase.
+3. A rectangular input, a non-finite input, a nonunitary square matrix, and two equal-magnitude matrices that are not equivalent up to global phase.
+4. A short explanation of why entrywise magnitudes do not preserve interference behavior.
+
+Self-check:
+The repaired validator must reject every invalid test case, accept H, and accept Rz(pi/2) @ SX @ Rz(pi/2) as H up to one global phase under the definitions supplied in this chapter.

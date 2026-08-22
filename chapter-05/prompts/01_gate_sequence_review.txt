@@ -1,0 +1,15 @@
+Context:
+I am a Python developer learning quantum gates as typed linear transformations. I use the ordered basis (|0>, |1>), NumPy's @ operator, and the rule that the rightmost gate acts first.
+
+Task:
+Review the sequence S @ H @ X @ |0>. Build a five-field gate contract for X, H, and S: input dimension, action on the relevant basis states, invariant, inverse, and composition position. Calculate every intermediate state, then calculate the standard-basis probabilities of the final state.
+
+Required output:
+1. A right-to-left application trace.
+2. Exact Dirac notation for each intermediate state.
+3. NumPy code that reproduces the trace.
+4. A unitarity check for each gate.
+5. A statement distinguishing amplitude, relative phase, and probability.
+
+Self-check:
+Verify that every intermediate state is normalized, that reversing the sequence with the adjoints returns |0>, and that no probability is inferred by discarding phase before the final state is formed.

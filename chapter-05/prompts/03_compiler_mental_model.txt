@@ -1,0 +1,14 @@
+Context:
+I understand compiler intermediate representations, pure functions, type signatures, instruction selection, and target-specific code generation. I am learning abstract quantum gates, unitary composition, and backend targets.
+
+Task:
+Build a careful software-development analogy for the path abstract circuit -> transpiler -> backend Target -> ISA-compatible circuit. Map gate arity and matrix dimension to types, matrix composition to function composition, U dagger to an inverse, and a native basis to target instructions.
+
+Required output:
+1. A two-column mapping from quantum concept to compiler concept.
+2. One worked example for compiling H and CNOT into an illustrative Rz, SX, and CZ basis.
+3. Three boundaries where the analogy fails, including amplitude interference, global-phase equivalence, and hardware calibration constraints.
+4. A checklist a developer should record to reproduce a transpilation result.
+
+Self-check:
+Do not describe a circuit object as a state vector, do not assume a vendor-wide fixed gate set, and do not claim that mathematical equivalence alone makes a circuit executable on a target.

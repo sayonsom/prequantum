@@ -1,8 +1,25 @@
 # Chapter 05: Quantum Gates as Transformations
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+Runnable examples and copyable learning artifacts from *Pre Quantum: Quantum Computing for Software Developers*.
 
-## Code Files
+## Guided-learning revision
+
+| # | Artifact | Learning task |
+|---|---|---|
+| 1 | [example_01_phase_to_probability.py](./example_01_phase_to_probability.py) | Trace relative phase into a measurement probability |
+| 2 | [example_02_pauli_contracts.py](./example_02_pauli_contracts.py) | Reconstruct the Pauli gate contracts |
+| 3 | [example_03_phase_family.py](./example_03_phase_family.py) | Distinguish phase gates, rotations, and controlled phase |
+| 4 | [example_04_hadamard_and_order.py](./example_04_hadamard_and_order.py) | Review basis change and application order |
+| 5 | [example_05_validate_unitary.py](./example_05_validate_unitary.py) | Validate a deterministic closed-system gate |
+| 6 | [example_06_multi_qubit_gates.py](./example_06_multi_qubit_gates.py) | Verify CNOT, SWAP, and Toffoli behavior |
+| 7 | [example_07_exact_gate_identities.py](./example_07_exact_gate_identities.py) | Separate exact identities from approximate synthesis |
+| 8 | [example_08_target_decomposition.py](./example_08_target_decomposition.py) | Check an illustrative target decomposition |
+
+The three book prompts are stored in [prompts](./prompts/). The reusable local reviewer is stored as the [quantum-gate-sequence-reviewer Skill](./skills/quantum-gate-sequence-reviewer/).
+
+## Earlier source extraction
+
+The following files are retained as the code extracted from the earlier manuscript. The guided-learning revision above is the publication set for the revised chapter.
 
 | # | File | Section |
 |---|------|--------|
