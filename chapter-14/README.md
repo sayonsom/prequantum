@@ -1,30 +1,26 @@
-# Chapter 14: The Math Behind the Magic
+# Chapter 14: Mathematical Records for Quantum Systems
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+These artifacts support the revised Chapter 14 manuscript. Each Python file is
+a standalone, deterministic experiment with assertions. The prompt files and
+local Skill are copied exactly into the manuscript.
 
-## Code Files
+## Python examples
 
-| # | File | Section |
-|---|------|--------|
-| 1 | [example_01_the_quick_win.py](./example_01_the_quick_win.py) | The Quick Win |
-| 2 | [example_02_eigenvalues_and_eigenvectors_the_full_pi.py](./example_02_eigenvalues_and_eigenvectors_the_full_pi.py) | Eigenvalues and Eigenvectors: The Full Picture |
-| 3 | [example_03_eigenvalues_and_eigenvectors_the_full_pi.py](./example_03_eigenvalues_and_eigenvectors_the_full_pi.py) | Eigenvalues and Eigenvectors: The Full Picture |
-| 4 | [example_04_eigenvalues_and_eigenvectors_the_full_pi.py](./example_04_eigenvalues_and_eigenvectors_the_full_pi.py) | Eigenvalues and Eigenvectors: The Full Picture |
-| 5 | [example_05_hamiltonians_and_time_evolution.py](./example_05_hamiltonians_and_time_evolution.py) | Hamiltonians and Time Evolution |
-| 6 | [example_06_hamiltonians_and_time_evolution.py](./example_06_hamiltonians_and_time_evolution.py) | Hamiltonians and Time Evolution |
-| 7 | [example_07_hamiltonians_and_time_evolution.py](./example_07_hamiltonians_and_time_evolution.py) | Hamiltonians and Time Evolution |
-| 8 | [example_08_density_matrices_beyond_pure_states.py](./example_08_density_matrices_beyond_pure_states.py) | Density Matrices: Beyond Pure States |
-| 9 | [example_09_density_matrices_beyond_pure_states.py](./example_09_density_matrices_beyond_pure_states.py) | Density Matrices: Beyond Pure States |
-| 10 | [example_10_quantum_channels_how_noise_acts_on_densi.py](./example_10_quantum_channels_how_noise_acts_on_densi.py) | Quantum Channels: How Noise Acts on Density Matrices |
-| 11 | [example_11_partial_trace_and_entanglement_entropy.py](./example_11_partial_trace_and_entanglement_entropy.py) | Partial Trace and Entanglement Entropy |
-| 12 | [example_12_partial_trace_and_entanglement_entropy.py](./example_12_partial_trace_and_entanglement_entropy.py) | Partial Trace and Entanglement Entropy |
-| 13 | [example_13_the_bloch_sphere_revisited_full_formalis.py](./example_13_the_bloch_sphere_revisited_full_formalis.py) | The Bloch Sphere Revisited: Full Formalism |
-| 14 | [example_14_the_bloch_sphere_revisited_full_formalis.py](./example_14_the_bloch_sphere_revisited_full_formalis.py) | The Bloch Sphere Revisited: Full Formalism |
-| 15 | [example_15_break_this.py](./example_15_break_this.py) | Break This |
+1. `example_01_track_state_evolution_in_observable_bases.py`
+2. `example_02_measure_a_degenerate_observable.py`
+3. `example_03_evolve_in_an_energy_eigenbasis.py`
+4. `example_04_compare_product_formula_errors.py`
+5. `example_05_validate_density_matrix_records.py`
+6. `example_06_distinguish_quantum_channels.py`
+7. `example_07_trace_subsystems_and_bound_entanglement_claims.py`
+8. `example_08_build_a_quantum_math_evidence_ledger.py`
 
-## Running the Code
+## AI learning artifacts
 
-```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
-```
+- `prompts/01_audit_a_quantum_mathematics_claim.txt`
+- `prompts/02_break_a_state_evolution_or_channel_pipeline.txt`
+- `prompts/03_translate_quantum_mathematics_into_typed_interfaces.txt`
+- `skills/quantum-math-ledger-reviewer/SKILL.md`
+
+The examples require NumPy and SciPy. Run one with
+`python example_01_track_state_evolution_in_observable_bases.py`.

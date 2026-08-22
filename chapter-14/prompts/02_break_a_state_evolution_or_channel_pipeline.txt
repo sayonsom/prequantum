@@ -1,0 +1,19 @@
+Act as a technical reviewer trying to falsify a state-evolution, density-matrix, partial-trace, or quantum-channel pipeline before it is published.
+
+Pipeline:
+[PASTE THE EQUATIONS AND CODE]
+
+Expected physical or mathematical behavior:
+[PASTE THE EXPECTATION]
+
+Audit in this order:
+1. Check dimensions, tensor-factor order, displayed-bit order, units, and whether hbar has been set to one.
+2. Check state normalization; density-matrix Hermiticity, positivity, and unit trace; operator Hermiticity; or channel complete positivity and trace preservation as applicable.
+3. For time evolution, compare at least one analytic checkpoint with exp(-iHt), and distinguish a global phase from a wrong relative phase or wrong time.
+4. For a degenerate observable, construct the projector for each eigenspace and calculate outcome probabilities from the projectors.
+5. For a product formula, state term order, step count, error metric, exact small-instance reference, and the bounded range over which an empirical slope is fitted.
+6. For a channel, verify the Kraus completeness relation and distinguish phase-flip probability, dephasing strength, depolarizing strength, and amplitude-damping probability.
+7. For a partial trace, verify which subsystem is discarded. Use reduced-state purity or entropy as an entanglement diagnostic only if the joint state is known to be pure.
+8. Label evidence as analytic, exact numerical, approximate numerical, simulation with a declared noise model, or hardware observation.
+
+Return a failure table with invariant, expected result, observed evidence, status, and minimal repair. Finish with the strongest conclusion that survives. Do not silently change conventions or reinterpret a failed check as global phase.

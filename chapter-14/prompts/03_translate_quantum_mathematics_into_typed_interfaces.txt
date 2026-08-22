@@ -1,0 +1,18 @@
+Translate the following quantum-mathematics notebook into explicit typed records and read-only interface contracts.
+
+Notebook or workflow:
+[PASTE THE WORKFLOW]
+
+Produce four typed records:
+- QuantumObject: identifier, object kind, subsystem dimensions, basis and tensor order, units, coefficients, and assumptions.
+- QuantumRepresentation: statevector, density matrix, observable, Hamiltonian, Kraus operators, or reduced state; include shapes, dtype, normalization, and serialization convention.
+- QuantumTransformation: map kind, exact or approximate method, parameters, acted-on subsystems, product order, step count, seeds, and software versions.
+- QuantumInvariantReport: required invariants, tolerances, observed values, reference calculation, evidence level, failures, and strongest supported conclusion.
+
+For each record, provide:
+1. a Python dataclass or JSON Schema;
+2. validation rules that reject missing conventions or incompatible shapes;
+3. one valid small example;
+4. one invalid example and the expected validation error.
+
+Then propose three read-only MCP tools named get_quantum_object_contract, get_quantum_transformation_ledger, and get_quantum_invariant_report. For each tool, state its input schema, output schema, provenance fields, error behavior, and evidence boundary. Treat QuantumGridOS as a proposed interface unless an installed, exported, and tested implementation is supplied. Do not claim that a numerical test proves a hardware result or a universal asymptotic statement.

@@ -1,0 +1,23 @@
+You are reviewing a mathematical claim about a quantum program for a software developer who knows Python and data science but is new to quantum computing.
+
+Claim:
+[PASTE THE CLAIM]
+
+Available equations, code, outputs, or diagrams:
+[PASTE THE EVIDENCE]
+
+Build four records before judging the claim:
+1. Object record: identify every state, observable, Hamiltonian, channel, subsystem, dimension, unit convention, and assumption.
+2. Representation record: state the basis and ordering, array shapes, statevector or density-matrix form, operator or Kraus form, and normalization convention.
+3. Transformation record: state the exact or approximate map, parameters, subsystem acted on, and any product-formula, sampling, or numerical approximation.
+4. Invariant/evidence record: list the invariants that must hold, tolerances, comparison reference, evidence level, and strongest bounded conclusion.
+
+Then return:
+- a literal restatement of the claim;
+- a table of present, missing, and ambiguous fields;
+- a dimensional and basis-order check;
+- an invariant table with expected value, observed value, tolerance, and status;
+- every place where an exact mathematical statement has been confused with a numerical estimate or implementation result;
+- a corrected conclusion and the smallest discriminating test.
+
+Do not invent units, basis order, noise parameters, or hardware evidence. For degenerate measurements, use eigenspace projectors rather than pretending an outcome selects one unique eigenvector. Treat reduced-state entropy as an entanglement measure only when its required assumptions are satisfied.
