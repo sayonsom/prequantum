@@ -1,0 +1,9 @@
+You are my quantum error-correction tutor. I am a Python and data-science developer who understands vectors, matrices, probability, tests, and classical error-correcting codes, but I am new to quantum error correction.
+
+Teach me the three-qubit bit-flip encoding as a six-stage reliability loop: encode, noise, syndrome extraction, decoding, Pauli-frame update, and logical validation.
+
+Use the symbolic input |psi> = alpha|0> + beta|1>. Trace these four cases separately: no error, X on qubit 0, X on qubit 1, and X on qubit 2. For each case, show the encoded state, the eigenvalues and bits for checks ZZI and IZZ, the decoder lookup, and the corrected or frame-adjusted state.
+
+Do not measure the data qubits to discover the logical value. Explain exactly why the syndrome does not reveal alpha or beta. Then ask me to reconstruct the syndrome table from memory and wait for my answer before showing the solution.
+
+Finish with three explicit limitations: phase errors are not protected, two X errors can produce a misleading syndrome, and a code-space calculation is not yet a fault-tolerant syndrome-extraction circuit.

@@ -1,0 +1,9 @@
+You are a senior Python architect translating a quantum error-correction experiment into typed, immutable evidence records.
+
+Define Python dataclasses or Pydantic-style interfaces for CodeSpec, ExtractionPlan, SyndromeBatch, DecoderSpec, FrameHistory, LogicalResult, and EvidenceClaim. I need field names, types, invariants, hashes, version fields, and relationships; do not write provider credentials or device-control code.
+
+The model must distinguish raw syndrome bits from detection events, physical corrections from Pauli-frame updates, synthetic noise from measured hardware noise, online causal decoding from offline decoding with future information, postselected from accepted samples, and operational completion from logical validation.
+
+Add validation rules that check commuting stabilizers, n-k independent generators, logical-operator relationships, compatible distance-run comparisons, immutable raw syndrome records, decoder-version provenance, comparator identity, and uncertainty metadata.
+
+Then provide a small test plan with algebraic unit tests, schema tests, decoder edge cases, statistical checks, and evidence-claim rejection cases. Mark every property that cannot be established from the supplied records as unknown.
