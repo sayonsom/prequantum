@@ -1,0 +1,15 @@
+Context:
+I am a Python developer learning to read a Qiskit QuantumCircuit as a declarative program. I distinguish the circuit object, the mathematical state it denotes under a chosen simulation model, the execution request, and the returned result.
+
+Task:
+Review a two-qubit circuit that applies H to q[0], CX from q[0] to q[1], and measures q[0] into c[0] and q[1] into c[1]. Trace the program from construction to interpretation without treating the circuit object as a state vector.
+
+Required output:
+1. A contract table for qubits, classical bits, operation order, and measurement mapping.
+2. The state before measurement in Qiskit's |q[1]q[0]> label convention.
+3. Exact standard-basis probabilities.
+4. The possible displayed count keys and an explanation of why q[0] is the rightmost character.
+5. Qiskit code using public APIs, including QuantumCircuit.find_bit when indices are inspected.
+
+Self-check:
+State explicitly which statements are exact mathematical claims and which describe a finite sample. Do not infer a backend, noise model, or hardware timing.

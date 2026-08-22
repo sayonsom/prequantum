@@ -1,0 +1,21 @@
+Context:
+The code below is intended to prepare |01> in Qiskit's ket-label convention, measure it, and report whether q[0] was one. The author assumes the leftmost displayed bit is q[0].
+
+Buggy code:
+qc = QuantumCircuit(2)
+qc.x(0)
+qc.measure_all()
+counts = StatevectorSampler().run([qc], shots=32).result()[0].data.meas.get_counts()
+q0_is_one = all(key[0] == "1" for key in counts)
+
+Task:
+Repair the code and the interpretation. Use a fixed seed, an explicit shot count in a V2 sampler PUB, and a named classical register or a clearly documented measure_all register.
+
+Required output:
+1. Correct runnable Qiskit code.
+2. A four-row ordering ledger for circuit wire order, statevector index order, ket labels, and displayed classical strings.
+3. A test that establishes q[0] is one without relying on an undocumented assumption.
+4. One counterexample showing how the original index test can report the wrong qubit.
+
+Self-check:
+Do not change the circuit's semantics merely to make the original assertion pass. Explain that draw(reverse_bits=True) changes a drawing, not the stored qubit labels.

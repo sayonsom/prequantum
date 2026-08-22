@@ -1,0 +1,16 @@
+Context:
+I understand compilers, intermediate representations, target instruction sets, register allocation, routing, and reproducible builds. I am learning Qiskit's circuit and transpiler contracts.
+
+Task:
+Translate the workflow abstract QuantumCircuit -> backend Target -> preset pass manager -> ISA circuit into compiler language, then review a supplied transpilation report.
+
+Required output:
+1. A mapping from quantum terms to compiler terms, with a boundary for each analogy.
+2. The target operation names and two-qubit connectivity retrieved from the supplied backend object.
+3. The Qiskit version, optimization level, transpiler seed, initial layout policy, and resulting layout.
+4. Checks that every output instruction is supported at its assigned qubits.
+5. An equivalence check that accounts for global phase and the transpiled layout.
+6. A statement explaining why logical depth is not a hardware duration.
+
+Self-check:
+Do not infer a native gate set from a provider or processor-family name. Do not claim hardware executability from operator equivalence alone, and do not claim semantic equivalence from matching one input histogram.

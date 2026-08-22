@@ -1,6 +1,31 @@
 # Chapter 06: Quantum Circuits
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+Runnable examples and copyable learning artifacts from *Pre Quantum: Quantum Computing for Software Developers*.
+
+## Guided-learning revision
+
+| # | Artifact | Learning task |
+|---|---|---|
+| 1 | [example_01_circuit_to_result.py](./example_01_circuit_to_result.py) | Separate the circuit, exact model, sampled execution, and result |
+| 2 | [example_02_inspect_circuit_contract.py](./example_02_inspect_circuit_contract.py) | Inspect operations and bit mappings through public APIs |
+| 3 | [example_03_qiskit_bit_order.py](./example_03_qiskit_bit_order.py) | Reconcile Qiskit's circuit, ket-label, and count-string conventions |
+| 4 | [example_04_execution_contracts.py](./example_04_execution_contracts.py) | Choose exact probabilities or expectation values according to the question |
+| 5 | [example_05_depth_and_dependencies.py](./example_05_depth_and_dependencies.py) | Read circuit depth from wire dependencies |
+| 6 | [example_06_parameterized_template.py](./example_06_parameterized_template.py) | Compose and bind a parameterized circuit template |
+| 7 | [example_07_compile_for_target.py](./example_07_compile_for_target.py) | Compile against an explicit target and verify the transformed circuit |
+| 8 | [example_08_dynamic_reset_to_zero.py](./example_08_dynamic_reset_to_zero.py) | Trace mid-circuit measurement and classical feedforward |
+
+The three copyable prompts are stored in [prompts](./prompts/). The reusable local reviewer is stored as the [qiskit-circuit-contract-reviewer Skill](./skills/qiskit-circuit-contract-reviewer/).
+
+These examples were validated with Qiskit 2.5.2 and Qiskit Aer 0.17.2. Install compatible versions with:
+
+```bash
+python -m pip install "qiskit~=2.5" "qiskit-aer~=0.17" numpy
+```
+
+## Earlier source extraction
+
+The following files are retained as code extracted from the earlier manuscript. The guided-learning revision above is the publication set for the revised chapter.
 
 ## Code Files
 
@@ -36,9 +61,15 @@ Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
 | 28 | [example_28_break_this.py](./example_28_break_this.py) | Break This |
 | 29 | [example_29_exercises.py](./example_29_exercises.py) | Exercises |
 
-## Running the Code
+## Running the guided examples
 
 ```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
+python chapter-06/example_01_circuit_to_result.py
+python chapter-06/example_02_inspect_circuit_contract.py
+python chapter-06/example_03_qiskit_bit_order.py
+python chapter-06/example_04_execution_contracts.py
+python chapter-06/example_05_depth_and_dependencies.py
+python chapter-06/example_06_parameterized_template.py
+python chapter-06/example_07_compile_for_target.py
+python chapter-06/example_08_dynamic_reset_to_zero.py
 ```
