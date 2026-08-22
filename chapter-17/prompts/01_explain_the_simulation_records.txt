@@ -1,0 +1,13 @@
+I am reviewing a two-qubit Hamiltonian-simulation experiment as a Python developer. The model is H = ZZ + 0.7*(XI + IX), the basis order is |00>, |01>, |10>, |11>, the initial state is |00>, the total time is 1, and hbar is set to 1.
+
+Reconstruct five separate records: system, Hamiltonian, evolution, observation, and evidence. Then:
+
+1. compute the three pairwise commutators among ZZ, XI, and IX;
+2. explain which terms can be grouped without product-formula error;
+3. derive one first-order step and one symmetric second-order step;
+4. distinguish operator-norm approximation error, finite-shot standard error, and hardware noise; and
+5. state the strongest conclusion supported by an exact NumPy reference and a noiseless circuit simulation.
+
+Return a five-row record table, a commutator table with explicit matrices or verified norms, the two product formulas with multiplication order stated, and a final evidence-boundary paragraph.
+
+Self-check your response by verifying Hermiticity, normalization, the zero commutator [XI, IX], and the nonzero commutators [ZZ, XI] and [ZZ, IX]. Do not claim hardware execution or computational advantage.

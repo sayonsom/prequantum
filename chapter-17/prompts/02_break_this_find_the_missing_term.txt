@@ -1,0 +1,20 @@
+The following NumPy program is intended to compare exact evolution under H = ZZ + 0.7*(XI + IX) with a first-order product formula:
+
+    dt = total_time / steps
+    exact = expm(-1j * H * total_time)
+    step = expm(-1j * ZZ * dt) @ expm(-1j * 0.7 * XI * dt)
+    approximate = np.linalg.matrix_power(step, steps)
+
+It reports a result, but the evolution record is incomplete and the approximation does not implement the declared Hamiltonian.
+
+Diagnose the conceptual bug, provide the smallest correct repair, and add tests that would have detected the omission. Your tests must reconstruct H from its recorded terms, check every term's shape and Hermiticity, compare steps 1, 2, 4, 8, 16, and 32 with the exact operator in spectral norm, and confirm that error decreases in the asymptotic regime.
+
+Return:
+
+1. the missing Hamiltonian term;
+2. corrected standalone code;
+3. a table of error versus step count;
+4. one test that distinguishes basis-order mistakes from normalization mistakes; and
+5. a short explanation of why a decreasing error curve does not measure hardware noise.
+
+Self-check by verifying that the repaired split sums exactly to H and that XI commutes with IX even though both fail to commute with ZZ.

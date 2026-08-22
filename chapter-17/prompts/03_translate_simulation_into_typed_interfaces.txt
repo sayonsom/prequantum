@@ -1,0 +1,17 @@
+Translate a Hamiltonian-simulation workflow into typed Python interfaces and a read-only MCP design.
+
+Preserve five records:
+
+1. system: basis labels, qubit order, initial state preparation, assumptions, and units;
+2. Hamiltonian: Pauli terms, coefficients, signs, source, mapping, and Hermiticity checks;
+3. evolution: total time, method, product-formula order, grouping, step count, circuit, and target backend;
+4. observation: observable terms, basis rotations, shots, estimator, and uncertainty; and
+5. evidence: exact reference, error metric, dependency versions, backend provenance, logical and transpiled resources, failures, and supported claim.
+
+Design Python dataclasses or Pydantic models with validators for dimension mismatch, non-finite coefficients, non-Hermitian operators, an undeclared basis order, a product formula with no term grouping, a shot estimate with no shot count, and a hardware claim with no backend provenance.
+
+Then propose read-only MCP tools for retrieving each record by immutable identifier. Include compact JSON schemas, version and hash fields, and explicit error responses. Keep job submission, solver execution, power-system mutation, and operational control outside the interface.
+
+Return the typed models, validation rules, MCP tool signatures, one valid example, one rejected example, and a boundary statement explaining when a local Skill is sufficient, when an MCP server is useful, and when a plugin may package both.
+
+Self-check that no field silently combines exact-reference error, product-formula error, sampling uncertainty, and hardware noise into one untyped value. Do not claim that the proposed MCP server or plugin is deployed.

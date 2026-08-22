@@ -1,26 +1,40 @@
 # Chapter 17: Quantum Simulation
 
-Code examples from *Pre Quantum: Quantum Computing for Software Developers*.
+These are the exact companion artifacts for the provisionally revised Chapter 17 of *Pre Quantum: Quantum Computing for Software Developers*.
 
-## Code Files
+## Python examples
 
-| # | File | Section |
-|---|------|--------|
-| 1 | [example_01_the_quick_win.py](./example_01_the_quick_win.py) | The Quick Win |
-| 2 | [example_02_the_simulation_problem.py](./example_02_the_simulation_problem.py) | The Simulation Problem |
-| 3 | [example_03_trotterization_breaking_the_exponential.py](./example_03_trotterization_breaking_the_exponential.py) | Trotterization: Breaking the Exponential Apart |
-| 4 | [example_04_deep_dive_the_trotter_suzuki_hierarchy.py](./example_04_deep_dive_the_trotter_suzuki_hierarchy.py) | Deep Dive: The Trotter-Suzuki Hierarchy |
-| 5 | [example_05_simulating_a_molecule_h₂_in_minimal_basi.py](./example_05_simulating_a_molecule_h₂_in_minimal_basi.py) | Simulating a Molecule: H₂ in Minimal Basis |
-| 6 | [example_06_beyond_h₂_what_quantum_chemistry_looks_l.py](./example_06_beyond_h₂_what_quantum_chemistry_looks_l.py) | Beyond H₂: What Quantum Chemistry Looks Like at Scale |
-| 7 | [example_07_trotterized_time_evolution_on_a_quantum.py](./example_07_trotterized_time_evolution_on_a_quantum.py) | Trotterized Time Evolution on a Quantum Circuit |
-| 8 | [example_08_beyond_trotter_advanced_simulation_metho.py](./example_08_beyond_trotter_advanced_simulation_metho.py) | Beyond Trotter: Advanced Simulation Methods |
-| 9 | [example_09_feynmans_dream_why_this_matters.py](./example_09_feynmans_dream_why_this_matters.py) | Feynman's Dream: Why This Matters |
-| 10 | [example_10_domain_bridge_quantum_simulation_for_pow.py](./example_10_domain_bridge_quantum_simulation_for_pow.py) | Domain Bridge: Quantum Simulation for Power Systems |
-| 11 | [example_11_break_this.py](./example_11_break_this.py) | Break This |
+| Example | Artifact | Purpose |
+| --- | --- | --- |
+| 17.1 | `example_01_evolve_a_two_spin_model_exactly.py` | Evolve a two-qubit transverse-field model and verify norm, symmetry, and energy invariants. |
+| 17.2 | `example_02_audit_commuting_and_noncommuting_terms.py` | Compute commutators before selecting a Hamiltonian-splitting method. |
+| 17.3 | `example_03_compare_product_formula_errors.py` | Compare first- and symmetric-second-order formulas with an exact operator reference. |
+| 17.4 | `example_04_compile_pauli_evolution_blocks.py` | Verify the matrices implemented by one- and two-qubit Pauli-evolution circuit blocks. |
+| 17.5 | `example_05_measure_an_observable_with_finite_shots.py` | Separate exact state evolution from a finite-shot observable estimate. |
+| 17.6 | `example_06_run_a_qdrift_channel_experiment.py` | Estimate a qDRIFT ensemble channel with reproducible Monte Carlo trials. |
+| 17.7 | `example_07_inspect_an_h2_qubit_hamiltonian.py` | Reconstruct and inspect a fixed two-qubit molecular Hamiltonian. |
+| 17.8 | `example_08_audit_the_quantumgridos_solver_boundary.py` | Classify the current QuantumGridOS HHL-fast numerical and circuit paths. |
 
-## Running the Code
+## AI-practice artifacts
+
+- `prompts/01_explain_the_simulation_records.txt`
+- `prompts/02_break_this_find_the_missing_term.txt`
+- `prompts/03_translate_simulation_into_typed_interfaces.txt`
+
+## Skill artifact
+
+- `skills/hamiltonian-simulation-reviewer/SKILL.md`
+
+## Environment used for the chapter audit
+
+- Python 3.14.4
+- NumPy 2.4.2
+- SciPy 1.18.1
+- Qiskit 2.5.2 for environment provenance; the chapter examples use NumPy and SciPy directly.
+- Example 17.8 targets QuantumGridOS 0.1.9 at repository commit `dff26bed704886e384c5f7df833828c965a7000a`. It records that the reviewed `hhl_fast` path returns a classical NumPy solution together with a proof-of-concept circuit.
+
+Run the local examples from this directory with:
 
 ```bash
-pip install qiskit qiskit-aer numpy matplotlib
-python <filename>.py
+python example_01_evolve_a_two_spin_model_exactly.py
 ```
