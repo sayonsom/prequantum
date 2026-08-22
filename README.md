@@ -15,7 +15,7 @@ Code examples from [*Pre Quantum: Quantum Computing for Software Developers*](ht
 | [07](./chapter-07) | Noise Errors and Why Quantum is Hard | 12 |
 | [08](./chapter-08) | Quantum Information Essentials | 14 |
 | [09](./chapter-09) | The Math Deepens | 14 |
-| [10](./chapter-10) | Your First Quantum Algorithms | 14 |
+| [10](./chapter-10) | First Quantum Algorithms | 12 |
 | [11](./chapter-11) | Grovers Search | 13 |
 | [12](./chapter-12) | Shors Algorithm and QFT | 12 |
 | [13](./chapter-13) | Variational Algorithms | 12 |

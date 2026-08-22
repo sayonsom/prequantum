@@ -1,5 +1,0 @@
-Step 1: Prepare inputs in uniform superposition (H^⊗n|0⟩^n)
-Step 2: Prepare output qubit in |−⟩ for phase kickback
-Step 3: Apply oracle → phases (−1)^f(x) encode f on the input register
-Step 4: Apply H^⊗n to input register → interference extracts global information
-Step 5: Measure → read off the answer

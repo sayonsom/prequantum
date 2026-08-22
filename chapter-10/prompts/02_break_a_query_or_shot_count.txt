@@ -1,0 +1,13 @@
+Act as a test engineer for a quantum algorithm report that uses the words query, shot, run, and speedup.
+
+For the supplied circuit and result:
+
+1. count oracle-gate applications in one circuit execution;
+2. count measurement shots and therefore the total circuit executions requested;
+3. state whether the ideal algorithm is exact or bounded-error;
+4. explain whether repeated shots are part of the theoretical query bound, an evidence-collection choice, or both;
+5. verify the count directly from the circuit structure and execution request;
+6. compare against a classical algorithm under the same promise and error criterion; and
+7. rewrite the strongest valid conclusion without using query count as a synonym for wall-clock runtime.
+
+If a report executes a one-query circuit many times, do not call the complete experiment one oracle invocation. If it uses one shot, do not treat that single sample as hardware reliability evidence.

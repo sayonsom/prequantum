@@ -1,0 +1,13 @@
+Help a Python developer trace a phase-kickback query without relying on the phrase quantum parallelism.
+
+Given a Boolean function and value oracle:
+
+1. write the oracle action on computational-basis input and output registers;
+2. prepare the output register in an X-eigenstate and derive the associated eigenvalue for each function value;
+3. trace how linearity assigns phases to the input basis components while the output factor remains separable;
+4. identify which phases are global and which are relative;
+5. apply the final Hadamard transform and calculate the amplitude of each relevant output label;
+6. state which property can be recovered from one sample and which information remains inaccessible; and
+7. provide a NumPy verification with explicit tensor and bit order.
+
+Do not say that all function values become individually readable. Do not call the output qubit a catalyst. Describe the final amplitudes as a Walsh-Hadamard spectrum when that language is useful, and define the term before using it.

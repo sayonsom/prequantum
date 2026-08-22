@@ -1,0 +1,10 @@
+Review a claimed quantum advantage in the oracle-query model.
+
+Produce four separate contracts:
+
+1. Promise contract: define the allowed input functions, the required output, and the success or error criterion.
+2. Oracle contract: write the classical and quantum oracle mappings, name every register and bit-order convention, and state whether the oracle is hidden or supplied as inspectable code.
+3. Query contract: state what counts as one query, which operations are excluded, and whether each classical and quantum bound is exact, deterministic, randomized, or bounded-error.
+4. Evidence contract: distinguish one oracle application per circuit execution from the number of shots, and separate exact calculation, ideal simulation, declared noise simulation, and hardware evidence.
+
+Then identify any comparison that mixes different contracts. Give a corrected claim, the smallest executable verification, and the costs that remain outside the query model. Do not infer runtime advantage from query count alone.
