@@ -1,0 +1,5 @@
+cirq-core==1.7.0
+numpy==2.4.2
+pennylane==0.45.1
+qiskit==2.5.2
+qiskit-aer==0.17.2

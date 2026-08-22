@@ -1,0 +1,14 @@
+Translate a quantum SDK-to-hardware workflow into typed Python interfaces that keep these records separate: ExperimentIntent, BackendCapabilitySnapshot, CompilationRecord, ExecutionRecord, and EvidenceRecord.
+
+Requirements:
+- The intent contains a circuit or circuit hash, measurement contract, parameters, and shots or target precision.
+- The capability snapshot is timestamped and describes the backend Target without assuming a permanent backend name.
+- The compilation record refers to both the intent and capability snapshot and stores layout, operations, depth, two-qubit count, optimization settings, and transpiler seed.
+- The execution record stores provider job identifiers and options but never stores credentials.
+- The evidence record stores raw-result location, metadata, uncertainty, post-processing transformations, and a bounded interpretation.
+- Use Protocols or abstract base classes so Qiskit, Cirq, and PennyLane adapters can implement the same application-facing contract.
+- Make submit() a separate interface from read-only inspection.
+- Include validation functions and unit-test examples.
+
+Use a Bell-parity experiment as the example. Show how the design would accept a candidate circuit produced by QuantumGridOS while keeping power-system formulation and feasibility validation outside the provider adapter. Do not call a live service and do not fabricate output.
+

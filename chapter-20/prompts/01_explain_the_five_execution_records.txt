@@ -1,0 +1,12 @@
+I am reviewing a quantum experiment as a software developer. Explain it through five separate records: intent, backend capability, compilation, execution job, and evidence.
+
+For each record:
+1. list the minimum fields it should contain;
+2. state which fields are stable and which must be captured at run time;
+3. give one invariant that can be checked automatically;
+4. give one common category error caused by mixing it with another record.
+
+Use a two-qubit Bell-parity experiment as the worked example. Distinguish an exact statevector probability from a finite-shot frequency. Distinguish an abstract circuit from an ISA circuit. Do not invent a backend name, calibration value, job ID, queue time, price, or hardware result. If information is absent, label it unknown.
+
+Finish with a compact typed Python data model and five retrieval questions. Keep the explanation direct and assume I know Python, arrays, APIs, and tests but not quantum hardware.
+

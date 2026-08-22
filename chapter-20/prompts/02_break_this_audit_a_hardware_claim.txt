@@ -1,0 +1,14 @@
+Audit the following quantum-hardware claim as if it were a production incident report:
+
+"We changed backend='simulator' to backend='ibm_example', enabled resilience level 1, and the real quantum computer returned the same optimal schedule in four minutes. Therefore mitigation worked and QAOA is noise resilient."
+
+Produce these sections:
+1. Claims that are unsupported or too broad.
+2. Missing intent, capability, compilation, job, and evidence fields.
+3. Checks required before anyone can call this a hardware result.
+4. Alternative explanations for agreement with the classical schedule.
+5. A corrected statement whose confidence is no stronger than the evidence.
+6. A minimal reproducibility record, including provider, backend, target or calibration timestamp, SDK versions, circuit hash, transpiler settings and seed, ISA metrics, primitive and options, shots or precision, job ID, timestamps, raw result location, post-processing, and classical comparator.
+
+Treat simulator output, illustrative numbers, mock-backend output, and a provider job result as different evidence classes. Do not infer that a named backend exists or is available. Do not request or reveal credentials. Do not submit, cancel, or modify a job.
+
