@@ -1,0 +1,10 @@
+Translate a quantum machine-learning notebook into typed, read-oriented software interfaces. The notebook may contain dataset loading, preprocessing, a quantum feature map or parameterized circuit, training, evaluation, and execution metadata.
+
+Define three interfaces:
+1. QMLDataContract for dataset identity, feature and label schemas, split indices or hashes, preprocessing fit scope, duplicate checks, and data provenance.
+2. QMLModelLedger for encoding, qubits, basis order, circuit or kernel definition, observable, parameter shapes, optimizer or solver, initialization, regularization, and software versions.
+3. QMLEvidenceReport for metrics, uncertainty method, baselines, ablations, execution target, shots and circuit counts, failures, limitations, and supported claim.
+
+For each interface, provide a compact JSON Schema, one valid example, one invalid example, and validation errors that identify the exact field at fault. Then propose read-only MCP tool contracts named get_qml_data_contract, get_qml_model_ledger, and get_qml_evidence_report. Each result must separate machine-readable data from explanatory text and must include schema version, source identifier, content hash, and timestamp.
+
+Do not invent live hardware results or claim that the MCP tools are deployed. Finish by showing how a reviewer would detect train/test leakage, an undeclared encoding scale, and a computational-advantage claim supported only by prediction accuracy.

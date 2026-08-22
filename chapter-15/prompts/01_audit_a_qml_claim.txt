@@ -1,0 +1,11 @@
+I am reviewing a bounded quantum machine-learning claim. I will provide the dataset description, split, preprocessing, feature map or parameterized circuit, training procedure, evaluation results, classical baselines, and execution record that are available.
+
+Audit the claim as four compatible records:
+1. Data record: population, sample construction, labels, train/validation/test split, preprocessing fit, leakage risks, and whether the input is classical or quantum.
+2. Feature/model record: encoding map, basis and qubit order, circuit, observable or kernel, trainable parameters, and classical hypothesis class induced when it is known.
+3. Learning record: objective, optimizer or kernel solver, initialization, regularization, hyperparameter selection, repetitions, and stopping rule.
+4. Evidence/resource record: held-out metrics, uncertainty, classical baselines, ablations, circuit evaluations, shots, compilation assumptions, noise or hardware provenance, and strongest supported conclusion.
+
+Return a table with the fields: record, supplied evidence, missing information, risk to interpretation, and smallest repair. Check normalization, kernel symmetry and positive semidefiniteness, split hygiene, metric definitions, and arithmetic where applicable. Separate predictive performance from computational advantage. Do not infer an advantage from Hilbert-space dimension, training accuracy, or classical simulation difficulty alone.
+
+Finish with exactly three items: the strongest conclusion currently supported, the most important unresolved uncertainty, and the smallest next experiment that could resolve it. Mark unknowns instead of inventing values.

@@ -1,0 +1,14 @@
+I will provide code and output from a quantum machine-learning evaluation pipeline. Treat the pipeline as potentially wrong even if its final accuracy is high.
+
+Inspect failures in this dependency order:
+1. data construction, labels, duplicate samples, and split leakage;
+2. preprocessing fit and feature scaling;
+3. quantum encoding, basis order, normalization, and input information lost by the encoding;
+4. kernel or variational-model calculation, including observables and parameter-shift assumptions;
+5. training, regularization, hyperparameter selection, and random seeds;
+6. held-out evaluation, uncertainty, classical baselines, and resource accounting;
+7. the wording of the final claim.
+
+Return a failure table with columns: stage, invariant, observed evidence, status, consequence, and minimal repair. Preserve checks that pass. If the code estimates a kernel with finite shots, inspect symmetry, diagonal values, eigenvalues, and whether any positive-semidefinite repair is confined to training data and explicitly reported. If the code trains a variational model, distinguish optimizer failure from small-gradient evidence and from a proved barren plateau.
+
+End with the strongest conclusion that survives the audit and one test that is more discriminating than simply increasing circuit depth, qubit count, or optimizer iterations.
