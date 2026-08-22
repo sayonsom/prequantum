@@ -1,0 +1,21 @@
+Context:
+I am reviewing a two-qubit NumPy teaching example. The chapter convention orders amplitudes as 00, 01, 10, 11 and treats the first tensor factor as the left bit.
+
+Faulty claim and code:
+The code applies np.kron(H,H) to [1,0,0,0], then applies controlled-NOT. Its standard-basis histogram contains all four labels. The author concludes that controlled-NOT failed to create entanglement and that hardware noise must be responsible.
+
+Task:
+Diagnose the program and the conclusion. Explain what np.kron(H,H) prepares, apply controlled-NOT analytically, and determine whether the resulting pure state is separable. Then rewrite the program so it creates Bell Phi-plus by applying H only to the left qubit.
+
+Required output:
+1. The faulty intermediate and final state arrays.
+2. The corrected lifted gate and corrected final array.
+3. The determinant separability test for both final pure states.
+4. A short table separating code error, state property, measurement evidence, and hardware claim.
+5. Two tests that fail for the faulty program and pass for the correction.
+
+Self-check:
+Do not infer hardware noise from a local NumPy calculation. Scope the determinant test to a normalized two-qubit pure state. Check bit order explicitly.
+
+Stopping boundary:
+Stop after the corrected code and tests. Do not propose running on a QPU.

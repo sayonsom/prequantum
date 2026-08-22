@@ -1,0 +1,19 @@
+Context:
+I understand Python arrays, database constraints, distributed transactions, correlated random variables, and test fixtures, but I am new to entanglement.
+
+Task:
+Build a comparison among three objects: a product two-qubit pure state, the Bell Phi-plus pure state, and a classical mixture that prepares 00 or 11 with equal probability. Use the four-cell ledger as the main representation.
+
+Required output:
+1. One four-cell ledger for each object.
+2. A factorization statement for each quantum pure state.
+3. The standard-basis probability distribution for all three objects.
+4. A Hadamard-basis comparison between Bell Phi-plus and the classical mixture.
+5. One database or distributed-systems analogy that helps with joint constraints.
+6. A boundary list explaining why the analogy does not model amplitudes, relative phase, basis changes, or local measurement randomness.
+
+Self-check:
+Confirm that perfect agreement in one basis can be classical. Do not describe entanglement as a hidden shared value, a message, a lock, or an instantaneous update API.
+
+Stopping boundary:
+Stop after the comparison and boundary list. Mention that a Bell-inequality experiment needs multiple settings, but do not derive the inequality.

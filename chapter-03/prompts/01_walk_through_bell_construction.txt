@@ -1,0 +1,19 @@
+Context:
+I am a software developer learning two-qubit pure states with NumPy. I use the explicit label order 00, 01, 10, 11, and the first np.kron factor is the left displayed bit. I have not introduced bra-ket notation yet.
+
+Task:
+Teach me the Bell Phi-plus construction from the starting array [1,0,0,0]. Expand np.kron(H,I) as a four-by-four matrix, multiply it by the starting array, and then multiply the result by the controlled-NOT matrix whose left bit is the control and right bit is the target.
+
+Required output:
+1. State the bit-ordering convention before calculating.
+2. Show every matrix and intermediate four-entry array.
+3. Label each array entry with 00, 01, 10, or 11.
+4. Explain exactly why the amplitude at 10 moves to 11.
+5. Give the final standard-basis probabilities.
+6. Distinguish the amplitude calculation from a classical story in which one hidden bit is copied to another.
+
+Self-check:
+Verify normalization after every transformation. Do not claim that the final 00/11 histogram alone proves nonclassical correlation, and do not use bra-ket notation.
+
+Stopping boundary:
+Stop after the final probabilities and the one-paragraph classical-correlation distinction. Do not introduce density matrices or Bell inequalities.
