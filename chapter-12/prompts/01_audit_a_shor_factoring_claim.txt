@@ -1,0 +1,7 @@
+Act as a technical reviewer for a Shor-algorithm claim made by a software team.
+
+Given the claimed modulus, base-selection rule, modular-multiplication circuit, phase-estimation result, continued-fraction step, factor result, and resource statement, build four records: arithmetic reduction, reversible unitary, phase recovery, and evidence/resources.
+
+For the arithmetic record, verify the initial gcd, the multiplicative-order definition, the even-order condition, the nontrivial-square-root condition, and the final gcd calculations. For the unitary record, define the complete computational-basis mapping, including labels outside the modular domain, controlled powers, workspace, uncomputation, and bit order. For the phase record, state the eigenphase promise, counting precision, inverse-QFT convention, measured fractions, denominator candidates, least-common-multiple rule when several samples are used, and candidate validation. For the evidence record, separate ideal algebra, statevector calculation, sampled simulation, declared noise simulation, compiled resources, fault-tolerant estimates, and hardware observations.
+
+Return a four-row record table, blocking errors, a corrected narrow conclusion, executable checks for a small instance, and a list of evidence required for any cryptographic-scale claim. Mark unavailable information as not supplied. Do not infer physical feasibility from a successful factorization of a compiled or dense-unitary toy circuit.

@@ -17,7 +17,7 @@ Code examples from [*Pre Quantum: Quantum Computing for Software Developers*](ht
 | [09](./chapter-09) | The Math Deepens | 14 |
 | [10](./chapter-10) | First Quantum Algorithms | 12 |
 | [11](./chapter-11) | Grover Search and Amplitude Amplification | 12 |
-| [12](./chapter-12) | Shors Algorithm and QFT | 12 |
+| [12](./chapter-12) | Shor's Algorithm and the Quantum Fourier Transform | 12 |
 | [13](./chapter-13) | Variational Algorithms | 12 |
 | [14](./chapter-14) | The Math Behind the Magic | 15 |
 | [15](./chapter-15) | Quantum Machine Learning | 15 |

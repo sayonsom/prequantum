@@ -1,0 +1,7 @@
+Help a Python and data-science developer construct a precise mental model of the quantum Fourier transform and quantum phase estimation.
+
+Use three interfaces: a classical FFT accepting and returning an explicitly readable array; a QFT accepting an amplitude-encoded quantum state and returning another quantum state; and phase estimation accepting a unitary circuit plus a promised eigenstate and returning sampled binary approximations to an eigenphase. For each interface, state the input type, transformation, accessible output, cost unit, and information that measurement does not reveal.
+
+Then trace one exact phase and one non-binary phase through controlled powers, the inverse QFT, the probability distribution, and classical interpretation. Connect periodic modular multiplication to the eigenphase s/r used in order finding. You may use a frequency-analysis analogy, but state that the QFT does not return a complete classical spectrum and that Shor's algorithm depends on coherent modular arithmetic before measurement.
+
+Return one comparison table, one phase-recovery trace, two prediction questions, and a final list titled where the analogy stops. Verify all binary fractions and probabilities numerically.

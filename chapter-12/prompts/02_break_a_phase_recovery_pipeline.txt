@@ -1,0 +1,7 @@
+A phase-estimation pipeline reports one measured fraction y/2^m, uses Fraction.limit_denominator(N), calls the returned denominator the order r, and immediately applies gcd(a^(r/2) plus or minus 1, N).
+
+Break this procedure with at least four cases: outcome y equals zero; the recovered fraction k/r is reduced so its denominator is a proper divisor of the true order; the candidate order is odd; and a^(r/2) is congruent to minus one modulo N. Include one case involving reversed Qiskit count-string order or a missing final QFT swap.
+
+For each case, provide the modulus, base, true order, measured or displayed bits, interpreted phase, continued-fraction result, failed assumption, and safe next action. Then write corrected pseudocode that combines repeated denominators conservatively, validates pow(a, candidate, N) equals one, reduces a validated multiple to the smallest order when possible, and retries the factoring reduction when the gcd result is trivial.
+
+End with unit tests for N equals 15 and N equals 21. Do not use a hard-coded period as evidence that the quantum subroutine recovered it.
