@@ -1,0 +1,14 @@
+Context:
+I know Python services, compiler pipelines, remote job APIs, and data-science experiments, but I am new to quantum computing.
+
+Task:
+Explain a gate-based quantum workflow by mapping it to a familiar heterogeneous computing system. Cover problem mapping, abstract circuit construction, target-specific transpilation, simulator testing, QPU execution, repeated measurement, and classical post-processing.
+
+Required output:
+1. A seven-row mapping table: quantum responsibility, familiar software analogue, shared structure, and where the analogy fails.
+2. A concrete walk-through of one small job from Python input to classical result without using bra-ket notation.
+3. Three debugging questions that distinguish a problem-mapping error, compilation issue, and execution or sampling issue.
+4. A final 100-word explanation using only literal language.
+
+Self-check:
+Verify that the explanation does not describe a quantum state as hidden classical data, a circuit as an executed state, a simulator as physical hardware, measurement as unrestricted inspection, or a QPU as a replacement for the surrounding classical system.

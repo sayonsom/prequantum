@@ -1,0 +1,19 @@
+Context:
+I am a software developer learning how to evaluate quantum-computing claims. I use four layers: problem, method, execution, and evidence. I also use an evidence ladder: correctness, physical hardware, benchmark comparison, end-to-end comparison, and reproducible operational value.
+
+Task:
+Review the quantum-computing claim that I paste below. Do not decide that the claim is true merely because it is specific or comes from a vendor. Separate statements supported by the supplied material from assumptions and future targets. If the material is insufficient, state exactly what evidence is missing.
+
+Claim and source material:
+[PASTE THE CLAIM AND ITS SOURCE MATERIAL HERE]
+
+Required output:
+1. Problem: input, output, constraints, and success metric.
+2. Method: quantum algorithm, classical components, and required resources.
+3. Execution: analysis, simulator, or physical hardware; include compilation, noise treatment, sampling, and post-processing when stated.
+4. Evidence: baseline, measured metric, uncertainty, reproducibility, and evidence-ladder level reached.
+5. Boundary: one sentence stating the strongest conclusion justified and one stronger conclusion that is not justified.
+6. Missing evidence: a short checklist ordered by importance.
+
+Self-check:
+Before finishing, verify that you did not treat a roadmap as a completed result, a simulator as hardware, a device benchmark as an application advantage, or an unnamed classical baseline as a fair comparison. Quote no more than one short phrase from the source; otherwise paraphrase.

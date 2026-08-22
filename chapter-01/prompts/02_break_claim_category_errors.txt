@@ -1,0 +1,16 @@
+Context:
+I am practicing the distinction among a circuit description, a classical simulator, a physical quantum processor, and an end-to-end application comparison.
+
+Faulty paragraph:
+“Our simulator executed a 100-qubit circuit, so the algorithm has been demonstrated on a 100-qubit quantum computer. The vendor roadmap says its next processor will use error correction, which proves that the present service is fault tolerant. Because the circuit contains more qubits than a competing system, it will solve optimization problems faster.”
+
+Task:
+Diagnose and rewrite the paragraph. Identify each unsupported inference, name the evidence layer that is actually present, and specify the test or record needed to support the stronger claim.
+
+Required output:
+1. A table with columns: statement, category error, current evidence, missing evidence.
+2. A literal corrected paragraph that preserves only supported claims.
+3. A minimal experiment record with fields for task, target kind, target name, compilation, samples, result metric, classical baseline, and total workflow cost.
+
+Self-check:
+Confirm that the rewrite does not infer hardware performance from simulation, current capability from a roadmap, workload performance from qubit count, or practical advantage from problem difficulty.
