@@ -1,0 +1,18 @@
+{
+  "name": "analyze_single_qubit_state",
+  "description": "Validate two real amplitudes and return a normalized state and standard-basis probabilities.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "amplitudes": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": { "type": "number" }
+      },
+      "normalize": { "type": "boolean", "default": true }
+    },
+    "required": ["amplitudes"],
+    "additionalProperties": false
+  }
+}

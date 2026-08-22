@@ -1,0 +1,5 @@
+Review the supplied BuggyQubit constructor as if it were a small scientific-computing pull request. The intended invariant is that a one-qubit state contains exactly two finite amplitudes whose squared magnitudes sum to one.
+
+First explain why dividing [3, 4] by the sum of squared magnitudes produces [0.12, 0.16] and a probability sum of 0.04. Then state the correct norm, repair the constructor, and add explicit checks for the wrong shape, non-finite values, and the zero vector. Add tests that verify [3, 4] becomes [0.6, 0.8], that both probabilities are calculated, and that their sum is one within floating-point tolerance.
+
+Organize the response as: failed invariant, arithmetic trace, repaired code, tests, and one sentence explaining why automatic normalization is a teaching convenience rather than a physical operation. Use NumPy only and stop before adding gates or measurement.

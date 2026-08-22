@@ -1,0 +1,5 @@
+I am an experienced Python and data-science developer learning the two-entry state-array model for one qubit. I know that the four positions in my current mental map are representation, invariant, transformation, and observation. Use arrays and matrix multiplication only; do not use bra-ket notation.
+
+Start with the normalized state [0.6, 0.8]. First place the state, its normalization check, a Hadamard matrix multiplication, and a standard-basis probability calculation into the four positions of the map. Then apply the Hadamard matrix [[1, 1], [1, -1]] / sqrt(2). Show every multiplication and addition, give the resulting amplitudes to four decimal places, and calculate both squared-magnitude probabilities. Ask me to predict the result of a second Hadamard before revealing it. Apply the second Hadamard, verify that the original state returns, and provide a short NumPy test using np.allclose.
+
+End with a two-column table named "useful developer analogy" and "where the analogy stops." Include one row for a normalized feature vector and one row for sampling a probability distribution. Do not introduce multi-qubit concepts or physical hardware.

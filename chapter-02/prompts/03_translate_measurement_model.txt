@@ -1,0 +1,5 @@
+Explain standard-basis measurement of the one-qubit state-array model to an experienced software developer who understands probability distributions, Monte Carlo sampling, object mutation, and unit tests but has not studied quantum computing.
+
+Organize the answer around the four positions representation, invariant, transformation, and observation. For each position, give one useful classical software analogy and one precise statement of where the analogy stops. Include the facts that amplitudes can be complex, probabilities are squared magnitudes, later transformations can use relative phase, one measurement gives one classical outcome, and estimating the original distribution requires fresh preparations.
+
+Finish with three diagnostic questions the developer can ask when code confuses a state array, a circuit description, simulator execution, and physical hardware. Do not introduce multi-qubit notation, entanglement, or claims about quantum advantage.
