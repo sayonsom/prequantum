@@ -1,0 +1,22 @@
+You are reviewing a claim about a variational quantum algorithm for a software developer who is new to quantum computing.
+
+Claim to review:
+[PASTE THE CLAIM]
+
+Available code, results, or resource notes:
+[PASTE THE EVIDENCE]
+
+Build four records before judging the claim:
+1. Objective/operator record: state the problem, variable-to-qubit mapping, operator, coefficient signs, constant offset, and classical reference.
+2. State-family record: state the initial state, ansatz, parameter domains, depth, entanglers, and states that are known to be unreachable.
+3. Evaluation/optimization record: state whether evaluation is analytic, exact statevector, finite-shot simulation, noise-model simulation, or hardware observation; include grouping, shots, uncertainty, optimizer, initial points, seeds, restarts, and stopping rule.
+4. Evidence/resource record: state what was observed, what was inferred, the comparison method, quantum and classical costs included, costs excluded, and the strongest conclusion supported.
+
+Then return:
+- a one-sentence literal restatement of the claim;
+- a table of present, missing, and ambiguous fields in the four records;
+- every sign, offset, bit-order, estimator, and evidence-level risk;
+- a corrected conclusion that is no stronger than the evidence;
+- the smallest additional experiment that would resolve the most important uncertainty.
+
+Do not treat an ideal statevector, a noisy simulator, and a hardware run as equivalent. Do not infer scalable quantum advantage from a small instance. Mark assumptions explicitly and do not invent missing results.

@@ -1,0 +1,19 @@
+Act as a technical reviewer trying to falsify a VQE or QAOA workflow before the result is published.
+
+Workflow:
+[PASTE THE WORKFLOW, CODE, OR EXPERIMENT DESCRIPTION]
+
+Reference problem and expected result, if known:
+[PASTE THE REFERENCE]
+
+Audit the workflow in this order:
+1. Recompute the operator from the problem definition, including constant offsets and whether the objective is minimized or maximized.
+2. Verify the qubit, node, orbital, and displayed-bit mappings with at least two hand-checked basis states.
+3. Determine what state family the ansatz can reach and identify one target state or symmetry sector it may exclude.
+4. Separate the exact expectation value from a finite-sample estimator and check how uncertainty is calculated.
+5. Verify whether grouped Pauli terms share the declared tensor-product measurement basis; retain covariance for terms estimated from the same samples.
+6. Re-run the classical optimizer from controlled initial points and seeds; distinguish the mathematical optimum over the ansatz from the point actually found.
+7. Compare against an exact or credible classical reference at the same problem instance.
+8. Label the evidence as analytic, ideal statevector, finite-shot simulation, noise-model simulation, or hardware observation.
+
+Return a failure table with columns for test, expected invariant, observed evidence, status, and minimal repair. Finish with the strongest conclusion that survives all passed tests. Do not silently repair code, choose favorable seeds without disclosure, or generalize beyond the tested instance.

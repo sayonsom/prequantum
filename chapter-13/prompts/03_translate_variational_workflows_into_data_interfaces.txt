@@ -1,0 +1,18 @@
+Translate the following variational quantum workflow into explicit software and data interfaces.
+
+Workflow:
+[PASTE THE VQE, QAOA, OR OTHER VARIATIONAL WORKFLOW]
+
+Produce four typed records:
+- VariationalProblem: problem identifier, variables, variable-to-qubit mapping, objective operator, constant offset, optimization direction, and reference solver.
+- StateFamily: qubit count, initial state, ansatz name, gate pattern, connectivity, parameter schema, depth, and symmetry constraints.
+- EvaluationPlan: estimator type, Pauli terms, grouping rule, shot allocation, uncertainty method, optimizer, initialization, seeds, restarts, stopping rule, and execution target.
+- EvidenceLedger: evidence level, observed metrics, reference metrics, quantum resources, classical resources, excluded costs, limitations, and strongest supported conclusion.
+
+For each record, provide:
+1. a Python dataclass or JSON Schema;
+2. validation rules that reject incompatible or incomplete fields;
+3. one valid small-instance example;
+4. one invalid example and the expected validation error.
+
+Then propose three read-only MCP tools named get_variational_problem_contract, get_variational_evaluation_ledger, and get_variational_run_evidence. For each tool, state its input schema, output schema, error behavior, and evidence boundary. Keep any QuantumGridOS integration as a declared interface contract unless an installed and tested implementation is supplied.
