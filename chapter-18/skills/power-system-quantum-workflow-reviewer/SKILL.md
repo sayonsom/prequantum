@@ -20,7 +20,8 @@ replace it with a capacity-selection toy or a different power-flow model.
    and the distinction between commitment and dispatch.
 3. Record every transformation into MILP, LP, QP, QUBO, Ising, or circuit
    form, including scaling, discretization, auxiliary variables, penalty
-   coefficients, qubit order, and the information discarded by the mapping.
+   coefficients, variable-to-qubit order, rotation conventions, logical
+   layers, measurement mapping, and the information discarded by the mapping.
 4. Record solver name and version, settings, seed, termination status, bounds,
    runtime boundary, backend, shots, calibration context, and returned raw
    candidates.
@@ -53,6 +54,19 @@ replace it with a capacity-selection toy or a different power-flow model.
 - Treat QAOA, annealing, and other binary optimizers as candidate generators
   unless the executed workflow proves more. Do not infer speedup or advantage
   from problem hardness, Hilbert-space size, qubit count, or a simulator run.
+- For a small QAOA reference, compare every QUBO energy with the corresponding
+  Ising basis-state energy. Verify the identity, Z, and ZZ coefficients; the
+  RZ and RZZ factor-of-two convention; cost-before-mixer order; variable-to-
+  qubit mapping; measurement mapping; and displayed-string decoding.
+- Distinguish Python construction loops, coherent QAOA layers, classical
+  parameter updates, transpiler passes, fresh shots, domain-validation calls,
+  and experiment comparisons. State what repeats, where its state lives, and
+  what record it returns. Do not describe shots or optimizer iterations as
+  coherent circuit loops.
+- For a transpiled circuit, record the target basis, coupling, settings,
+  logical and compiled operation counts, layout, and the equivalence check
+  appropriate to the declared ideal model. Keep compilation equivalence
+  separate from ansatz quality, sampling error, and hardware fidelity.
 - Inspect library source at an immutable version before describing an API.
   Mark placeholders, classical fallbacks, missing imports, unimplemented
   authorization, and unexecuted paths. Do not describe a formatter as a live

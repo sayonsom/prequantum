@@ -13,6 +13,7 @@ Review the supplied notebook, code, configuration, and results as compatible exp
 2. Reconstruct the feature/model record: encoding map, input range, basis and qubit order, circuit, kernel or observable, parameter shapes, and any known exact classical representation.
 3. Reconstruct the learning record: objective, optimizer or solver, initialization, regularization, seeds, hyperparameter selection, repetitions, stopping rule, and failure status.
 4. Reconstruct the evidence/resource record: held-out metrics, uncertainty, baselines, ablations, simulation or hardware provenance, circuit counts, shots, compilation assumptions, wall time, failures, and supported claim.
+5. Reconstruct the circuit and execution ledger: wire order, temporal gate order, data-fixed and trainable values, measurement mapping or observable order, target basis, coupling map, transpilation policy, parameter binding, independent shots, measurement groups, and every classical loop surrounding the circuit.
 
 ## Review invariants
 
@@ -21,6 +22,9 @@ Review the supplied notebook, code, configuration, and results as compatible exp
 - For exact kernels, check symmetry, unit diagonal when appropriate, and positive semidefiniteness within numerical tolerance.
 - For estimated kernels, report uncertainty and any symmetrization or positive-semidefinite repair as transformations of the data. Do not treat repair as proof that the estimates are accurate.
 - For parameterized circuits, check the observable, loss, gradient rule assumptions, initialization, optimizer status, and both training and held-out behavior.
+- Trace the logical circuit from left to right and classify each operation as preparation, data encoding, fixed model structure, trainable structure, entangling operation, readout transformation, measurement, reset, or classical control.
+- Keep construction, data or kernel-pair iteration, parameter-shift evaluation, transpilation, shots, optimizer updates, restarts, and hyperparameter search as separate repetition records. Do not infer that an outer classical loop is present inside one circuit execution.
+- Compare the logical and transpiled circuits under a declared small ideal test when artifacts are available. Treat matching ideal behavior as a compiler check, not as evidence about hardware noise or target performance.
 - Treat small gradients as a diagnostic. Require the stated ansatz, cost, initialization distribution, noise model, qubit range, sample count, and gradient estimator before calling an observation a barren plateau.
 - Compare against relevant classical baselines and classical approximations of the quantum model. Keep predictive advantage, sample advantage, runtime advantage, and asymptotic computational advantage separate.
 - Label evidence as analytic, exact numerical, finite-shot simulation, declared-noise simulation, or hardware observation.
@@ -30,6 +34,7 @@ Review the supplied notebook, code, configuration, and results as compatible exp
 Return:
 
 - the reconstructed records with unknown fields marked;
+- a left-to-right circuit ledger and an outside-in loop ledger when circuit artifacts are supplied;
 - an invariant table with expected condition, observation, tolerance or uncertainty, status, consequence, and smallest repair;
 - the strongest conclusion supported by held-out evidence;
 - a resource ledger and the smallest next experiment that addresses the leading uncertainty.

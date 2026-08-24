@@ -15,12 +15,14 @@ These are the exact companion artifacts for the provisionally revised Chapter
 | 18.6 | `example_06_screen_commitments_with_a_network_subproblem.py` | Screen binary commitments using a network-constrained LP. |
 | 18.7 | `example_07_audit_the_quantumgridos_boundary.py` | Inspect selected interfaces at a pinned QuantumGridOS commit. |
 | 18.8 | `example_08_build_an_evidence_record.py` | Build a hash-addressed, read-only evidence record. |
+| Circuit Lab 18.1 | `example_09_read_compile_and_validate_an_energy_qaoa_circuit.py` | Derive, read, transpile, sample, decode, and independently validate a three-qubit energy-QAOA circuit. |
 
 ## AI-practice artifacts
 
 - `prompts/01_explain_the_five_energy_records.txt`
 - `prompts/02_break_this_audit_an_energy_qubo.txt`
 - `prompts/03_translate_grid_optimization_into_typed_interfaces.txt`
+- `prompts/04_design_and_trace_an_energy_qaoa_circuit.txt`
 
 ## Skill artifact
 
@@ -31,6 +33,8 @@ These are the exact companion artifacts for the provisionally revised Chapter
 - Python 3.14.4
 - NumPy 2.4.2
 - SciPy 1.18.1
+- Qiskit 2.5.2
+- Qiskit Aer 0.17.2
 - Example 18.7 targets QuantumGridOS repository commit
   `dff26bed704886e384c5f7df833828c965a7000a`. It performs source inspection
   and does not execute a grid-control or quantum-computing job.

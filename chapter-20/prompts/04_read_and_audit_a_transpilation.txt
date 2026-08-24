@@ -1,0 +1,27 @@
+Read and audit the supplied quantum transpilation as a software developer who is learning how logical circuits become target-specific instruction-set circuits.
+
+Use four passes:
+1. Intent: identify logical wires, state preparation, entangling operations, measurements or observables, classical register order, and the declared output invariant.
+2. Layout: reconstruct initial logical-to-physical placement, routing-induced final placement, workspace or ancilla positions, and the physical-measurement-to-classical-bit map.
+3. ISA: list native operations, verify each operation and physical edge against the supplied Target, and report depth and native two-qubit count. Do not search for source gate names inside decompositions.
+4. Evidence: propose an exact behavioral check for declared inputs when tractable, then a separate finite-shot decoding check. State precisely what these tests do and do not prove.
+
+Then distinguish four repetition scopes in the supplied workflow: Python circuit-construction loops, compiler seed or settings loops, shots inside one job, and repeated experiments. For each scope, name the repeated object, the output artifact, and the record that owns it.
+
+Requirements:
+- Treat the source circuit, Target snapshot, compilation record, execution record, and evidence record as separate artifacts.
+- Preserve bit and endianness conventions explicitly.
+- If an initial layout, final layout, measurement map, Target property, SDK version, seed, or job fact is missing, mark it unknown; do not infer it from a drawing.
+- Distinguish a local exact simulator, ideal finite-shot simulator, noisy simulator, provider simulator, and physical-QPU job.
+- Do not fabricate a backend, calibration value, job ID, hardware result, or provider capability.
+- Do not authenticate or submit a job.
+
+Return:
+1. the four-pass audit ledger;
+2. passed, failed, and unknown invariants;
+3. one annotated logical-to-physical mapping table;
+4. minimal Python tests for target support, measurement decoding, and the declared output contract;
+5. the four-scope repetition table;
+6. a bounded conclusion and the evidence needed to strengthen it;
+7. five delayed-retrieval questions with answers separated at the end.
+

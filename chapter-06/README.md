@@ -8,14 +8,16 @@ Runnable examples and copyable learning artifacts from *Pre Quantum: Quantum Com
 |---|---|---|
 | 1 | [example_01_circuit_to_result.py](./example_01_circuit_to_result.py) | Separate the circuit, exact model, sampled execution, and result |
 | 2 | [example_02_inspect_circuit_contract.py](./example_02_inspect_circuit_contract.py) | Inspect operations and bit mappings through public APIs |
-| 3 | [example_03_qiskit_bit_order.py](./example_03_qiskit_bit_order.py) | Reconcile Qiskit's circuit, ket-label, and count-string conventions |
-| 4 | [example_04_execution_contracts.py](./example_04_execution_contracts.py) | Choose exact probabilities or expectation values according to the question |
-| 5 | [example_05_depth_and_dependencies.py](./example_05_depth_and_dependencies.py) | Read circuit depth from wire dependencies |
-| 6 | [example_06_parameterized_template.py](./example_06_parameterized_template.py) | Compose and bind a parameterized circuit template |
-| 7 | [example_07_compile_for_target.py](./example_07_compile_for_target.py) | Compile against an explicit target and verify the transformed circuit |
-| 8 | [example_08_dynamic_reset_to_zero.py](./example_08_dynamic_reset_to_zero.py) | Trace mid-circuit measurement and classical feedforward |
+| 3 | [example_03_state_trace_and_entanglement.py](./example_03_state_trace_and_entanglement.py) | Trace one wire and the Bell circuit through exact mathematical checkpoints |
+| 4 | [example_03_qiskit_bit_order.py](./example_03_qiskit_bit_order.py) | Reconcile Qiskit's circuit, ket-label, and count-string conventions |
+| 5 | [example_04_execution_contracts.py](./example_04_execution_contracts.py) | Choose exact probabilities or expectation values according to the question |
+| 6 | [example_05_depth_and_dependencies.py](./example_05_depth_and_dependencies.py) | Read circuit depth from wire dependencies |
+| 7 | [example_06_parameterized_template.py](./example_06_parameterized_template.py) | Compose and bind a parameterized circuit template |
+| 8 | [example_07_loop_to_parity_circuit.py](./example_07_loop_to_parity_circuit.py) | Translate a Python construction loop and XOR invariant into a reversible circuit |
+| 9 | [example_07_compile_for_target.py](./example_07_compile_for_target.py) | Compile against an explicit target and verify the transformed circuit |
+| 10 | [example_08_dynamic_reset_to_zero.py](./example_08_dynamic_reset_to_zero.py) | Trace mid-circuit measurement and classical feedforward |
 
-The three copyable prompts are stored in [prompts](./prompts/). The reusable local reviewer is stored as the [qiskit-circuit-contract-reviewer Skill](./skills/qiskit-circuit-contract-reviewer/).
+The five copyable prompts are stored in [prompts](./prompts/). The reusable local reviewer is stored as the [qiskit-circuit-contract-reviewer Skill](./skills/qiskit-circuit-contract-reviewer/).
 
 These examples were validated with Qiskit 2.5.2 and Qiskit Aer 0.17.2. Install compatible versions with:
 
@@ -66,10 +68,12 @@ The following files are retained as code extracted from the earlier manuscript. 
 ```bash
 python chapter-06/example_01_circuit_to_result.py
 python chapter-06/example_02_inspect_circuit_contract.py
+python chapter-06/example_03_state_trace_and_entanglement.py
 python chapter-06/example_03_qiskit_bit_order.py
 python chapter-06/example_04_execution_contracts.py
 python chapter-06/example_05_depth_and_dependencies.py
 python chapter-06/example_06_parameterized_template.py
+python chapter-06/example_07_loop_to_parity_circuit.py
 python chapter-06/example_07_compile_for_target.py
 python chapter-06/example_08_dynamic_reset_to_zero.py
 ```

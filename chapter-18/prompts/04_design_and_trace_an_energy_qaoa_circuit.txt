@@ -1,0 +1,16 @@
+I am a Python and data-science developer designing a small QAOA experiment for
+an energy-system QUBO. Start from the constrained problem and preserve the
+meaning, order, and units of every binary variable. For a tractable instance,
+expand the QUBO, substitute x_i = (1 - z_i) / 2, and verify the resulting Ising
+energy against every computational-basis assignment. Then produce: (1) a term
+ledger for the identity, Z, and ZZ coefficients; (2) the exact RZ, RZZ, and RX
+gate angles under explicitly stated Qiskit conventions; (3) a left-to-right
+logical circuit reading; (4) the displayed-bit-string to domain-array mapping;
+(5) a loop ledger separating Python construction, coherent QAOA layers,
+classical parameter updates, transpilation, fresh shots, decoding, continuous
+dispatch, network validation, and experiment comparison; and (6) executable
+tests that compare the logical circuit with an independent state-vector
+calculation and validate decoded candidates in the original domain model.
+State which constraints are absent from the QUBO. Stop before claiming hardware
+execution, operational approval, speedup, or practical advantage unless the
+supplied evidence directly establishes that claim.

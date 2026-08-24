@@ -24,6 +24,7 @@ counts = pub_result.data.meas.get_counts()
 print("exact probabilities:", exact_probabilities)
 print("sampled outcomes:", sorted(counts))
 print("total shots:", sum(counts.values()))
+print("logical circuit:\n", bell.draw(output="text", fold=-1))
 
 assert exact_state.equiv((Statevector.from_label("00") + Statevector.from_label("11")) / 2**0.5)
 assert set(counts) <= {"00", "11"}

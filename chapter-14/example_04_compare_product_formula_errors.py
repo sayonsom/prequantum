@@ -15,7 +15,8 @@ exact = expm(-1j * H * total_time)
 
 def first_order(steps):
     dt = total_time / steps
-    step = expm(-1j * A * dt) @ expm(-1j * B * dt)
+    # Temporal order is A then B; the rightmost matrix acts first.
+    step = expm(-1j * B * dt) @ expm(-1j * A * dt)
     return np.linalg.matrix_power(step, steps)
 
 

@@ -14,12 +14,14 @@ These are the exact companion artifacts for the provisionally revised Chapter 16
 | 16.6 | `example_06_verify_an_xy_mixer_preserves_feasibility.py` | Verify that an XY ring mixer preserves Hamming weight. |
 | 16.7 | `example_07_wrap_the_model_with_quantumgridos.py` | Wrap the manually verified polynomial in the current QuantumGridOS QUBO interface. |
 | 16.8 | `example_08_build_an_optimization_evidence_ledger.py` | Validate a five-record optimization evidence ledger. |
+| 16.9 | `example_09_read_compile_and_verify_a_qaoa_circuit.py` | Build the exact logical QAOA circuit, verify it against Example 16.5, and compile it for a declared line target. |
 
 ## AI-practice artifacts
 
 - `prompts/01_ask_your_ai_audit_a_qubo_derivation.txt`
 - `prompts/02_break_this_find_the_matrix_convention_bug.txt`
 - `prompts/03_translate_optimization_into_typed_interfaces.txt`
+- `prompts/04_design_and_trace_a_qaoa_circuit.txt`
 
 ## Skill artifact
 
@@ -30,7 +32,7 @@ These are the exact companion artifacts for the provisionally revised Chapter 16
 - Python 3.14.4
 - NumPy 2.4.2
 - SciPy 1.18.1
-- Qiskit 2.5.2 for environment provenance; Examples 16.1–16.6 and 16.8 use NumPy/SciPy only.
+- Qiskit 2.5.2; Examples 16.1–16.6 and 16.8 use NumPy/SciPy, while Example 16.9 constructs and transpiles the exact QAOA circuit.
 - Example 16.7 targets QuantumGridOS 0.1.9 at repository commit `dff26bed704886e384c5f7df833828c965a7000a`. It is isolated from the chapter's numerical proof so that the formulation remains auditable without that package.
 
 Run the local examples from this directory with:

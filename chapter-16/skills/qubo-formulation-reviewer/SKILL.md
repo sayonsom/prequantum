@@ -14,6 +14,7 @@ Review the supplied problem statement, formulation, code, coefficients, and resu
 3. Record each original constraint separately from its penalty or structural encoding. For inequalities, identify every slack variable, range, and bit weight.
 4. Record the QUBO convention, binary-to-spin substitution, Hamiltonian term order, initial state, mixer, optimizer, seed, shots, backend, compilation settings, and stopping rule when applicable.
 5. Record exact or classical baselines, feasibility checks after decoding, objective values in original units, timing boundaries, uncertainty, failures, and the strongest supported claim.
+6. When a circuit is supplied, record the variable-to-qubit map, displayed bit order, preparation, every cost and mixer operation, measurement mapping, logical depth, target basis and coupling map, transpilation settings, final layout, and the classical loops surrounding execution.
 
 ## Check invariants
 
@@ -23,11 +24,13 @@ Review the supplied problem statement, formulation, code, coefficients, and resu
 - Distinguish an equality penalty from an inequality. Do not replace a less-than-or-equal constraint with equality unless bounded slack or another exact encoding is present.
 - Establish a penalty bound or sweep. Check that the best infeasible energy is strictly above the best feasible energy, then report coefficient range and objective resolution after any rescaling.
 - Verify x_i = (1 - z_i)/2 or the user's declared alternative on all tractable assignments before accepting an Ising or Pauli Hamiltonian.
-- For a constraint-preserving mixer, check that the initial state is feasible and that the mixer preserves the declared feasible subspace. A commuting conserved quantity is evidence only for the constraint it represents.
 - Treat QAOA, quantum annealing, simulated annealing, and exact enumeration as different execution records. Decode and evaluate every returned sample with the original objective and constraints.
+- For QAOA, derive each logical Pauli-rotation angle from the declared Ising Hamiltonian and SDK gate convention. Check the initial state, cost-term operands, mixer operands, layer order, parameter order, measurement wiring, and bit-string decoding.
+- Trace the logical circuit from left to right, but trace the complete algorithm from the innermost circuit execution outward. Keep coefficient and circuit construction, coherent layer repetition, parameter evaluations, transpilation, shots, final sampling, restarts, depth studies, and instance-family benchmarking as separate repetition records.
+- Treat transpilation as a target-specific classical transformation. When logical and compiled artifacts are available, compare them under a declared small ideal test, record layout and final bit mapping, and report changed depth and two-qubit operations. Ideal equivalence is a compiler check, not hardware evidence.
+- For a constraint-preserving mixer, verify both that the initial state is feasible and that the mixer preserves the declared subspace. Do not generalize one conserved quantity into proof of every original constraint.
 - Do not infer computational advantage from search-space size, Hilbert-space dimension, a successful toy instance, approximation quality alone, or a simulator result. Require a relevant classical baseline and a declared end-to-end resource comparison.
 
 ## Report
 
-Return the reconstructed five records, an invariant table with observed and expected values, every mismatch and its smallest repair, and a conclusion bounded by the available evidence. Mark unknown fields explicitly. If a QuantumGridOS Skill, MCP server, solver, or plugin is unavailable, describe it as proposed and do not claim it was executed or deployed.
-
+Return the reconstructed five records, an invariant table with observed and expected values, every mismatch and its smallest repair, and a conclusion bounded by the available evidence. When circuit artifacts are supplied, also return a left-to-right operation ledger, an outside-in repetition ledger, and a logical-versus-compiled comparison. Mark unknown fields explicitly. If a QuantumGridOS Skill, MCP server, solver, or plugin is unavailable, describe it as proposed and do not claim it was executed or deployed.

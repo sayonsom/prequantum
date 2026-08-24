@@ -14,12 +14,14 @@ These are the exact companion artifacts for the provisionally revised Chapter 17
 | 17.6 | `example_06_run_a_qdrift_channel_experiment.py` | Estimate a qDRIFT ensemble channel with reproducible Monte Carlo trials. |
 | 17.7 | `example_07_inspect_an_h2_qubit_hamiltonian.py` | Reconstruct and inspect a fixed two-qubit molecular Hamiltonian. |
 | 17.8 | `example_08_audit_the_quantumgridos_solver_boundary.py` | Classify the current QuantumGridOS HHL-fast numerical and circuit paths. |
+| 17.9 | `example_09_read_compile_and_verify_a_simulation_circuit.py` | Assemble, transpile, and verify a complete symmetric product-formula circuit and its observable record. |
 
 ## AI-practice artifacts
 
 - `prompts/01_explain_the_simulation_records.txt`
 - `prompts/02_break_this_find_the_missing_term.txt`
 - `prompts/03_translate_simulation_into_typed_interfaces.txt`
+- `prompts/04_design_and_trace_a_simulation_circuit.txt`
 
 ## Skill artifact
 
@@ -30,7 +32,7 @@ These are the exact companion artifacts for the provisionally revised Chapter 17
 - Python 3.14.4
 - NumPy 2.4.2
 - SciPy 1.18.1
-- Qiskit 2.5.2 for environment provenance; the chapter examples use NumPy and SciPy directly.
+- Qiskit 2.5.2 for the logical-circuit, transpilation, layout, and ideal-equivalence checks in Example 17.9.
 - Example 17.8 targets QuantumGridOS 0.1.9 at repository commit `dff26bed704886e384c5f7df833828c965a7000a`. It records that the reviewed `hhl_fast` path returns a classical NumPy solution together with a proof-of-concept circuit.
 
 Run the local examples from this directory with:

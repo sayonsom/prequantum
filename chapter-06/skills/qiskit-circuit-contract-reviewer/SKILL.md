@@ -26,17 +26,23 @@ Report missing material as unresolved rather than supplying assumptions silently
 1. List operations in program order with public circuit indices obtained through `QuantumCircuit.find_bit` when code is available.
 2. Build an ordering ledger covering circuit-list order, diagram order, integer significance, ket labels, Pauli labels, and displayed classical strings that are relevant to the supplied program.
 3. Separate unitary preparation from measurement, reset, delay, and control-flow operations.
-4. State which mathematical model is being used. Do not describe a `QuantumCircuit` object as a stored state vector.
-5. Check the execution interface:
+4. Read small circuits in three passes:
+   - syntax: name every operation and complete operand tuple;
+   - state: declare the input and basis order, then trace an exact state or invariant after each logical layer without inserting measurements;
+   - evidence: derive only the probabilities, expectation values, or classical records exposed by the declared measurement.
+5. For a controlled operation, state its control-zero and control-one basis actions, retain the control, and extend the map linearly when the control may be in superposition. Do not replace coherent control with a measured classical branch.
+6. State which mathematical model is being used. Do not describe a `QuantumCircuit` object as a stored state vector.
+7. Classify every repetition as host-language construction, in-circuit control flow, independent shots, or a classical outer update. State when it runs, what it repeats, and where its mutable state lives.
+8. Check the execution interface:
    - exact statevector inspection requires a compatible circuit without measurement or unresolved control flow;
    - a Sampler circuit must expose classical measurement data;
    - an Estimator request must pair the circuit with compatible observables;
    - a local statevector primitive does not model device noise or provide error mitigation merely because it uses the primitive interface.
-6. Trace dependencies on each wire and distinguish instruction count, circuit depth, scheduled duration, and wall-clock job time.
-7. For parameterized circuits, list free parameters, binding shapes, and the parameter values associated with each result.
-8. For compilation claims, require an explicit backend or `Target`. Record operation support, connectivity, layout, optimization level, transpiler seed, and SDK version.
-9. Check equivalence with a method that accounts for the declared layout and global phase. Matching one input histogram is insufficient evidence of operator equivalence.
-10. For mid-circuit measurement and classical control, identify every branch, the classical condition, the state-changing operation in each branch, and whether the selected execution system supports the control-flow construct.
+9. Trace dependencies on each wire and distinguish instruction count, circuit depth, scheduled duration, and wall-clock job time.
+10. For parameterized circuits, list free parameters, binding shapes, and the parameter values associated with each result.
+11. For compilation claims, require an explicit backend or `Target`. Record operation support, connectivity, layout, optimization level, transpiler seed, and SDK version.
+12. Check equivalence with a method that accounts for the declared layout and global phase. Matching one input histogram is insufficient evidence of operator equivalence.
+13. For mid-circuit measurement and classical control, identify every branch, the classical condition, the state-changing operation in each branch, and whether the selected execution system supports the control-flow construct.
 
 ## Output
 
@@ -44,7 +50,9 @@ Return:
 
 - the declared contract and unresolved assumptions;
 - an ordering ledger;
+- a syntax, state-or-invariant, and evidence trace;
 - an operation and measurement trace;
+- a repetition classification when any loop, shot batch, or parameter update is present;
 - the selected execution model and interface-fit findings;
 - dependency and depth findings;
 - compilation metadata and target checks when supplied;
