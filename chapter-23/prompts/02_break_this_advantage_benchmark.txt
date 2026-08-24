@@ -12,6 +12,6 @@ Create a review with these sections:
 9. supported conclusion;
 10. missing evidence and next tests.
 
-For every mismatch, state exactly what differs: input family, output, tolerance, preprocessing, hardware, time boundary, sampling, postprocessing, validation, or access. Do not repair missing evidence by guessing. Do not treat a quantum simulator as hardware. Do not infer practical value from a specialized sampling task or infer asymptotic scaling from a few measured instances.
+For every mismatch, name the differing field and value: input family, output, tolerance, preprocessing, hardware, time boundary, sampling, postprocessing, validation, or access. Do not repair missing evidence by guessing. Do not treat a quantum simulator as hardware. Do not infer practical value from a specialized sampling task or infer asymptotic scaling from a few measured instances.
 
 After the review, propose the smallest reproducible experiment that would remove the most important uncertainty. Include a serious classical baseline and an independent output validator.
