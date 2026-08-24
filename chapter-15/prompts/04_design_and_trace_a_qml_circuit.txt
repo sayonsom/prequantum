@@ -1,0 +1,13 @@
+I am a software developer designing a small quantum machine-learning circuit. I will provide the feature schema, label meaning, prediction task, output range, baseline models, and available execution target. Help me design backward from the required classical evidence instead of beginning with an arbitrary circuit.
+
+Return the following records in order:
+1. An evidence contract stating the prediction, metric, split, uncertainty, classical baselines, and strongest conclusion that the experiment could support.
+2. A model function signature of the form quantum_evaluate(data, parameters, observable, execution_contract) -> estimate, with types and shape checks.
+3. A wire ledger and left-to-right operation ledger. For every gate, name its operands, temporal position, and whether its value is fixed by data, fixed by design, or trainable.
+4. A measurement contract that states the observable or bit-string event, qubit and classical-bit order, estimator, shots or exact evaluation, and returned value range.
+5. A loop ledger that separately identifies host-language construction, dataset or kernel-pair iteration, parameter-shift evaluations, transpilation, independent shots, measurement grouping, optimizer updates, and hyperparameter or restart loops.
+6. A target-compilation record containing the basis gates, coupling map, layout policy, optimization level, seed, and a small ideal equivalence check between logical and transpiled circuits.
+7. Minimal Qiskit code, followed by tests for dimensions, basis order, one hand-computable input, logical-versus-transpiled ideal behavior, and one gradient or kernel invariant.
+8. A resource expression in symbols before substituting any sample counts, parameters, observables, shots, iterations, or retries.
+
+Keep labels, loss functions, optimizers, split logic, and claims outside the logical circuit unless a declared dynamic-circuit feature genuinely requires classical control during one execution. Explain each entangling gate through its operands and intended model interaction, but do not claim that entanglement guarantees useful learning or quantum advantage. Prefer the smallest circuit that can express the stated interaction. Mark unsupported target features and unknown costs instead of inventing them.

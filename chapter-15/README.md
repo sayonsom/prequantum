@@ -14,13 +14,15 @@ local Skill are copied exactly into the manuscript.
 6. `example_06_compare_local_and_global_gradient_records.py`
 7. `example_07_verify_a_symmetry_informed_model.py`
 8. `example_08_build_a_qml_evidence_ledger.py`
+9. `example_09_read_qml_circuits_and_execution_loops.py`
 
 ## AI learning artifacts
 
 - `prompts/01_audit_a_qml_claim.txt`
 - `prompts/02_break_a_qml_evaluation_pipeline.txt`
 - `prompts/03_translate_qml_into_typed_interfaces.txt`
+- `prompts/04_design_and_trace_a_qml_circuit.txt`
 - `skills/qml-experiment-reviewer/SKILL.md`
 
-The examples require NumPy and SciPy. Example 2 also requires Qiskit. Run one
+The examples require NumPy and SciPy. Examples 2 and 9 also require Qiskit. Run one
 with `python example_01_compare_a_quantum_kernel_with_its_classical_formula.py`.
