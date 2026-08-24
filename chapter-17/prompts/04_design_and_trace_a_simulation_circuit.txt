@@ -1,0 +1,15 @@
+I am designing a two-qubit Hamiltonian-simulation circuit as a Python developer. Use H = ZZ + 0.7*(XI + IX), total time t = 0.8, two symmetric second-order product-formula repetitions, initial state |00>, and the displayed bit-string convention q1q0. Set hbar = 1.
+
+Build the explanation from the classical evidence record backward to the circuit. Return:
+
+1. the requested classical record for estimating M_z = (ZI + IZ)/2, including shots, estimator, uncertainty, and acceptance checks;
+2. a Hamiltonian-term table containing coefficient, qubit operands, time slice, gate identity, and exact gate angle;
+3. the complete logical circuit, read left to right on wires q0 and q1, with the two symmetric repetitions and the final measurement mapping;
+4. a state trace for |00> after the first ZZ half-step, the two commuting X rotations, and the closing ZZ half-step of the first repetition;
+5. a repetition ledger that separates the Python construction loop, coherent formula repetitions, transpilation, fresh shots, any parameter or time sweep, and independent validation runs;
+6. a target-compilation record containing basis gates, coupling map, optimization setting, seed, initial and final layout, logical counts and depth, compiled counts and depth, and a layout-aware ideal equivalence check; and
+7. separate tests for product-formula approximation error, logical-to-compiled equivalence, finite-shot uncertainty, and hardware behavior.
+
+Use RZZ(phi) = exp(-i*phi*ZZ/2) and RX(phi) = exp(-i*phi*X/2). Derive every angle instead of copying it. State the matrix basis and explain how Qiskit's q1q0 display order relates to array indices.
+
+Self-check that each symmetric half-step uses RZZ(delta), each full transverse-field step uses RX(1.4*delta) on both qubits, shots repeat the completed circuit rather than extend its coherent time, and compiler equivalence does not remove the product-formula approximation error. Do not infer physical-device fidelity or quantum advantage from an exact simulator or a successful transpilation.
