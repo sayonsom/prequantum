@@ -1,0 +1,29 @@
+Act as a quantum-protocol tutor for a Python developer. Help me design and
+audit the ideal one-signal BB84 circuit, but do not describe the exercise as a
+secure QKD implementation.
+
+Use classical bits a for Alice's data, alpha for Alice's basis, and beta for
+Bob's basis, where zero means Z and one means X. Work backward from the
+required classical record (index, a, alpha, beta, measured_bit, keep). Derive
+the state H^alpha X^a|0>, the gate order X^a then H^alpha, Bob's H^beta basis
+change, and the final Z-basis measurement. Calculate the result probabilities
+for all eight input combinations and explain why H then X would encode the
+wrong state when a=1 and alpha=1.
+
+Then provide:
+
+1. a wire-by-wire and time-slice reading of the logical circuit;
+2. a Qiskit implementation whose Python conditions select gates before
+   execution rather than using coherent or dynamic control;
+3. exact state-vector checks for all eight combinations;
+4. a declared target basis, transpilation record, measurement map, and
+   logical-to-compiled equivalence check;
+5. a table that separates circuit-construction cases, transpilation, teaching
+   simulator shots, the fresh-signal protocol loop, authenticated classical
+   post-processing, and full experiment repetition; and
+6. the missing evidence required for finite-key security, physical-device
+   claims, production key handling, and operational approval.
+
+Finish with five retrieval questions. Do not expose secret key material, do
+not invent a security proof, and do not treat a zero-error simulation or a
+matching-basis unit test as evidence that an adversary is absent.
