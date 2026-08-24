@@ -8,7 +8,9 @@ from enum import Enum
 
 class NormalizedState(str, Enum):
     QUEUED = "queued"
+    INITIALIZING = "initializing"
     RUNNING = "running"
+    CANCELLING = "cancelling"
     SUCCEEDED = "succeeded"
     FAILED = "failed"
     CANCELLED = "cancelled"
@@ -16,16 +18,18 @@ class NormalizedState(str, Enum):
 
 
 STATUS_MAP: dict[str, dict[str, NormalizedState]] = {
-    "ibm": {
-        "queued": NormalizedState.QUEUED,
-        "running": NormalizedState.RUNNING,
-        "completed": NormalizedState.SUCCEEDED,
-        "failed": NormalizedState.FAILED,
-        "cancelled": NormalizedState.CANCELLED,
+    "ibm-runtime-sdk": {
+        "QUEUED": NormalizedState.QUEUED,
+        "INITIALIZING": NormalizedState.INITIALIZING,
+        "RUNNING": NormalizedState.RUNNING,
+        "DONE": NormalizedState.SUCCEEDED,
+        "ERROR": NormalizedState.FAILED,
+        "CANCELLED": NormalizedState.CANCELLED,
     },
-    "aws-braket": {
+    "aws-braket-hybrid-job": {
         "QUEUED": NormalizedState.QUEUED,
         "RUNNING": NormalizedState.RUNNING,
+        "CANCELLING": NormalizedState.CANCELLING,
         "COMPLETED": NormalizedState.SUCCEEDED,
         "FAILED": NormalizedState.FAILED,
         "CANCELLED": NormalizedState.CANCELLED,
@@ -65,8 +69,8 @@ def normalize(
 
 
 snapshots = [
-    normalize("ibm", "ibm-job-7", "completed", "2026-08-22T00:00:00Z", "backend-a"),
-    normalize("aws-braket", "braket-job-9", "RUNNING", "2026-08-22T00:00:01Z", "device-b"),
+    normalize("ibm-runtime-sdk", "ibm-job-7", "DONE", "2026-08-22T00:00:00Z", "backend-a"),
+    normalize("aws-braket-hybrid-job", "braket-job-9", "CANCELLING", "2026-08-22T00:00:01Z", "device-b"),
     normalize("provider-c", "job-11", "PAUSED", "2026-08-22T00:00:02Z", None),
 ]
 for snapshot in snapshots:

@@ -1,0 +1,28 @@
+Review a quantum-classical algorithm as a set of nested execution and repetition boundaries.
+
+Assume I am a Python and data-science developer who is new to quantum computing. Begin with one literal sentence that distinguishes a gate, a circuit, a shot, a provider job, and a classical algorithm iteration.
+
+For the supplied design, build a loop ledger with these columns:
+
+1. boundary name;
+2. repeated object;
+3. owner;
+4. input consumed;
+5. output produced;
+6. stopping rule;
+7. authoritative request, plan, job, result, or operations record;
+8. whether it creates new quantum evidence;
+9. what it can be confused with.
+
+Check separately for a Python construction loop, compiler candidate search, shot repetition, provider jobs, a batch or session, classical optimizer updates, provider polling, service retry or reconciliation, and complete experiment replication. If a boundary is absent, say absent. If it is not supplied, say unknown.
+
+Then trace one iteration backward from the intended application conclusion to the raw measurement and forward from the request to that conclusion. Identify every point at which a parameter, circuit artifact, target snapshot, provider identifier, raw result, or derived estimate changes identity.
+
+Finish with:
+
+- one corrected nested mental model;
+- one state-machine boundary that must remain operational rather than scientific;
+- tests that prove polling does not submit work, retry does not silently duplicate work, shots do not update parameters, and a new parameter set creates a new execution record;
+- the narrowest evidence claim supported by the supplied design.
+
+Do not authenticate, submit, cancel, reserve, rerun, invent provider behavior, or infer physical-hardware evidence from a job record.

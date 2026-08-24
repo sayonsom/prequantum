@@ -1,6 +1,6 @@
 ---
 name: quantum-service-architecture-reviewer
-description: Review a quantum-classical service by separating request, plan, job, result, and operations records. Use when designing or auditing asynchronous APIs, idempotency, provider adapters, result caches, observability, or QuantumGridOS service boundaries. Do not use it to authenticate, submit, cancel, or mutate provider jobs.
+description: Review a quantum-classical service by separating request, plan, job, result, and operations records and mapping nested execution loops. Use when designing or auditing asynchronous APIs, shots, algorithm iterations, polling, retries, idempotency, provider adapters, result caches, observability, or QuantumGridOS service boundaries. Do not use it to authenticate, submit, cancel, or mutate provider jobs.
 ---
 
 # Quantum Service Architecture Reviewer
@@ -25,7 +25,21 @@ Create separate sections for:
 
 Mark every absent field `unknown` or `not supplied`. Never put tokens, passwords, private keys, or provider credentials into these records.
 
-## 3. Check distributed-system invariants
+## 3. Map nested execution and repetition
+
+Create a loop ledger for every supplied repetition boundary. For each boundary, record the repeated object, owner, input, output, stopping rule, authoritative record, and whether it creates new quantum evidence. Check explicitly for Python construction loops, compiler candidate search, shot repetition, provider jobs, batch or session grouping, classical optimizer updates, provider polling, service retry or reconciliation, and complete experiment replication.
+
+Keep the following distinctions explicit:
+
+- a gate is one circuit instruction;
+- a circuit is one ordered preparation, transformation, and measurement description;
+- a shot is one fresh preparation and execution of the same compiled circuit;
+- a provider job is a scheduled unit with a provider lifecycle;
+- a classical iteration may bind new parameters and create new quantum work;
+- polling changes service knowledge but does not create quantum evidence;
+- retry or reconciliation is an operational decision and must not silently become experiment replication.
+
+## 4. Check distributed-system invariants
 
 Verify that:
 
@@ -42,28 +56,29 @@ Verify that:
 
 Report an invariant failure as an error, not as provider noise.
 
-## 4. Check quantum evidence boundaries
+## 5. Check quantum evidence boundaries
 
 Distinguish exact simulation, finite-shot ideal simulation, noisy or synthetic data, provider simulator jobs, and physical-QPU jobs. A successful HTTP request, worker completion, provider job, or cache hit does not by itself prove scientific validity, application feasibility, optimality, or quantum advantage.
 
 Require the result record to link back to the exact intent, capability, compilation, and execution evidence needed for the stated conclusion.
 
-## 5. Review deployment and operations
+## 6. Review deployment and operations
 
 Check container provenance, dependency pins, non-root execution, external secret handling, least privilege, bounded retries, timeout ownership, durable storage, result retention, trace correlation, metric-cardinality limits, health semantics, and incident visibility.
 
 Treat product names, plan limits, queue policies, pricing, device availability, and managed-service interfaces as time-sensitive. Require a dated primary source or mark the claim for re-verification.
 
-## 6. Produce the review
+## 7. Produce the review
 
 Return:
 
 1. architecture and authority scope;
 2. five-record ledger;
-3. passed and failed invariants;
-4. duplicate-work and data-loss risks;
-5. unsupported quantum or application claims;
-6. deployment, secret, and observability findings;
-7. bounded corrected conclusions;
-8. safe read-only next checks;
-9. state-changing actions that require separate authorization.
+3. nested execution and loop ledger;
+4. passed and failed invariants;
+5. duplicate-work and data-loss risks;
+6. unsupported quantum or application claims;
+7. deployment, secret, and observability findings;
+8. bounded corrected conclusions;
+9. safe read-only next checks;
+10. state-changing actions that require separate authorization.
