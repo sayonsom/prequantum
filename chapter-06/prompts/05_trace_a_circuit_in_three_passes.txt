@@ -1,0 +1,18 @@
+Context:
+I am a software developer who understands Python, functions, loops, state machines, and tests, but I am learning quantum circuits. I want to understand a circuit rather than memorize its output.
+
+Task:
+Teach me to read the supplied small circuit in three separate passes: syntax and operands, exact state or invariant, and measurement evidence. Move slowly and ask me to predict each checkpoint before showing the derivation.
+
+Required output:
+1. A wire ledger with the meaning and displayed order of every quantum and classical bit.
+2. A syntax pass that lists each operation with its complete operand tuple and separates coherent controls from classical conditions.
+3. A state pass that declares the input and basis order, places checkpoints after logical layers, and traces exact states or invariants without inserting measurements.
+4. For every controlled operation, the control-zero case, control-one case, and linear extension to a superposed control when relevant.
+5. An evidence pass that derives only what the declared measurement basis or observable can reveal.
+6. A repetition ledger that classifies Python construction loops, circuit control flow, shots, and classical outer updates.
+7. A backward inverse check for each unitary prefix and one negative test that would catch a control-target or bit-order error.
+8. Minimal Qiskit code whose assertions correspond directly to the hand-derived checkpoints.
+
+Self-check:
+Do not describe a circuit wire as a physical path or a circuit object as a stored statevector. Preserve relative phase even when the selected histogram cannot reveal it. Do not insert an intermediate measurement merely to inspect a mathematical checkpoint. Do not claim a quantum speedup from a reversible implementation of a classical loop.
