@@ -11,7 +11,7 @@ Audit in this order:
 2. Check state normalization; density-matrix Hermiticity, positivity, and unit trace; operator Hermiticity; or channel complete positivity and trace preservation as applicable.
 3. For time evolution, compare at least one analytic checkpoint with exp(-iHt), and distinguish a global phase from a wrong relative phase or wrong time.
 4. For a degenerate observable, construct the projector for each eigenspace and calculate outcome probabilities from the projectors.
-5. For a product formula, state term order, step count, error metric, exact small-instance reference, and the bounded range over which an empirical slope is fitted.
+5. For a product formula or its circuit synthesis, state temporal circuit order, right-to-left matrix order, step count, error metric, exact small-instance reference, and the bounded range over which an empirical slope is fitted. If Pauli terms are compiled into gates, also check the SDK's Pauli-label order and the factor-of-two convention between exp(-i theta P) and the corresponding rotation gate.
 6. For a channel, verify the Kraus completeness relation and distinguish phase-flip probability, dephasing strength, depolarizing strength, and amplitude-damping probability.
 7. For a partial trace, verify which subsystem is discarded. Use reduced-state purity or entropy as an entanglement diagnostic only if the joint state is known to be pure.
 8. Label evidence as analytic, exact numerical, approximate numerical, simulation with a declared noise model, or hardware observation.

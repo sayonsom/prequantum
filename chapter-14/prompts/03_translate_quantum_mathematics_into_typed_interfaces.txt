@@ -6,7 +6,7 @@ Notebook or workflow:
 Produce four typed records:
 - QuantumObject: identifier, object kind, subsystem dimensions, basis and tensor order, units, coefficients, and assumptions.
 - QuantumRepresentation: statevector, density matrix, observable, Hamiltonian, Kraus operators, or reduced state; include shapes, dtype, normalization, and serialization convention.
-- QuantumTransformation: map kind, exact or approximate method, parameters, acted-on subsystems, product order, step count, seeds, and software versions.
+- QuantumTransformation: map kind, exact or approximate method, parameters, acted-on subsystems, temporal circuit order, right-to-left matrix order, Pauli-label order, synthesis method, step count, transpilation target, seeds, and software versions.
 - QuantumInvariantReport: required invariants, tolerances, observed values, reference calculation, evidence level, failures, and strongest supported conclusion.
 
 For each record, provide:

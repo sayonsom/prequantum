@@ -12,10 +12,11 @@ Runnable examples and copyable learning artifacts from *Pre Quantum: Quantum Com
 | 4 | [example_04_execution_contracts.py](./example_04_execution_contracts.py) | Choose exact probabilities or expectation values according to the question |
 | 5 | [example_05_depth_and_dependencies.py](./example_05_depth_and_dependencies.py) | Read circuit depth from wire dependencies |
 | 6 | [example_06_parameterized_template.py](./example_06_parameterized_template.py) | Compose and bind a parameterized circuit template |
-| 7 | [example_07_compile_for_target.py](./example_07_compile_for_target.py) | Compile against an explicit target and verify the transformed circuit |
-| 8 | [example_08_dynamic_reset_to_zero.py](./example_08_dynamic_reset_to_zero.py) | Trace mid-circuit measurement and classical feedforward |
+| 7 | [example_07_loop_to_parity_circuit.py](./example_07_loop_to_parity_circuit.py) | Translate a Python construction loop and XOR invariant into a reversible circuit |
+| 8 | [example_07_compile_for_target.py](./example_07_compile_for_target.py) | Compile against an explicit target and verify the transformed circuit |
+| 9 | [example_08_dynamic_reset_to_zero.py](./example_08_dynamic_reset_to_zero.py) | Trace mid-circuit measurement and classical feedforward |
 
-The three copyable prompts are stored in [prompts](./prompts/). The reusable local reviewer is stored as the [qiskit-circuit-contract-reviewer Skill](./skills/qiskit-circuit-contract-reviewer/).
+The four copyable prompts are stored in [prompts](./prompts/). The reusable local reviewer is stored as the [qiskit-circuit-contract-reviewer Skill](./skills/qiskit-circuit-contract-reviewer/).
 
 These examples were validated with Qiskit 2.5.2 and Qiskit Aer 0.17.2. Install compatible versions with:
 
@@ -70,6 +71,7 @@ python chapter-06/example_03_qiskit_bit_order.py
 python chapter-06/example_04_execution_contracts.py
 python chapter-06/example_05_depth_and_dependencies.py
 python chapter-06/example_06_parameterized_template.py
+python chapter-06/example_07_loop_to_parity_circuit.py
 python chapter-06/example_07_compile_for_target.py
 python chapter-06/example_08_dynamic_reset_to_zero.py
 ```

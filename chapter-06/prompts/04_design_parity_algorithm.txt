@@ -1,0 +1,16 @@
+Context:
+I am a Python developer learning to design a small quantum program from a required classical result. I want to keep circuit-construction loops, in-circuit control flow, shots, and classical outer loops separate.
+
+Task:
+Design a reversible parity accumulator for three basis-state input qubits and one accumulator qubit. Begin with the output contract and work backward to the input preparation. Then read the completed circuit forward. Do not claim a quantum speedup.
+
+Required output:
+1. An algorithm ledger containing the problem, output, representation, preparation, problem transform, readout, repetition class, and validation rule.
+2. A loop invariant after each controlled-X operation.
+3. A wire-and-operation ledger that can be converted into a circuit drawing without guessing operands.
+4. Qiskit code in which a Python loop constructs a reusable parity subcircuit.
+5. Exact tests for all three-bit computational-basis inputs.
+6. A separate paragraph explaining what changes when the data qubits begin in superposition and why one measurement does not return every component's parity.
+
+Self-check:
+Classify every loop by when it runs and what it repeats. Keep a coherent quantum control distinct from a classical branch. Treat direct computational-basis measurement as one sampled outcome, not as access to the statevector or to all parallel branches.

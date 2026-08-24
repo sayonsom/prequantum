@@ -30,7 +30,7 @@ record = QuantumMathEvidence(
     basis_and_order="NumPy basis |00>, |01>, |10>, |11>",
     units="hbar=1",
     representation="4x4 complex Hermitian matrix",
-    transformation="first- and second-order product formulas",
+    transformation="first-order A-then-B and symmetric second-order product formulas",
     approximation="operator 2-norm error against scipy.linalg.expm for steps 1 through 64",
     invariant_checks=("H=H_dagger", "U_dagger U=I", "error decreases on tested step grid"),
     evidence_level="approximate_numerical",

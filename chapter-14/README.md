@@ -14,6 +14,7 @@ local Skill are copied exactly into the manuscript.
 6. `example_06_distinguish_quantum_channels.py`
 7. `example_07_trace_subsystems_and_bound_entanglement_claims.py`
 8. `example_08_build_a_quantum_math_evidence_ledger.py`
+9. `example_09_synthesize_hamiltonian_terms_as_a_circuit.py`
 
 ## AI learning artifacts
 
@@ -22,5 +23,5 @@ local Skill are copied exactly into the manuscript.
 - `prompts/03_translate_quantum_mathematics_into_typed_interfaces.txt`
 - `skills/quantum-math-ledger-reviewer/SKILL.md`
 
-The examples require NumPy and SciPy. Run one with
+The examples require NumPy, SciPy, and Qiskit 2.x. Run one with
 `python example_01_track_state_evolution_in_observable_bases.py`.

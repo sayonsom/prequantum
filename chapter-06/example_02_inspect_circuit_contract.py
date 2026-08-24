@@ -17,7 +17,27 @@ print("classical bits:", circuit.num_clbits)
 print("operations:", circuit.size())
 print("logical depth:", circuit.depth())
 
+stored_signature = []
+
 for instruction in circuit.data:
     q_indices = [circuit.find_bit(bit).index for bit in instruction.qubits]
     c_indices = [circuit.find_bit(bit).index for bit in instruction.clbits]
+    stored_signature.append((instruction.operation.name, q_indices, c_indices))
     print(instruction.operation.name, "q=", q_indices, "c=", c_indices)
+
+default_view = circuit.draw(output="text", fold=-1)
+reversed_view = circuit.draw(output="text", fold=-1, reverse_bits=True)
+print("default drawing:\n", default_view)
+print("reversed presentation:\n", reversed_view)
+
+signature_after_drawing = []
+for instruction in circuit.data:
+    signature_after_drawing.append(
+        (
+            instruction.operation.name,
+            [circuit.find_bit(bit).index for bit in instruction.qubits],
+            [circuit.find_bit(bit).index for bit in instruction.clbits],
+        )
+    )
+
+assert signature_after_drawing == stored_signature

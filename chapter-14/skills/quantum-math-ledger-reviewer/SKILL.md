@@ -1,6 +1,6 @@
 ---
 name: quantum-math-ledger-reviewer
-description: Audit a bounded quantum-mathematics workflow by reconstructing its objects, representations, transformations, invariants, and evidence boundary. Use for eigenproblems, Hamiltonian evolution, density matrices, channels, partial traces, or Bloch-vector calculations; do not use to infer unobserved hardware behavior.
+description: Audit a bounded quantum-mathematics workflow by reconstructing its objects, representations, transformations, invariants, and evidence boundary. Use for eigenproblems, Hamiltonian evolution, Pauli-term circuit synthesis, density matrices, channels, partial traces, or Bloch-vector calculations; do not use to infer unobserved hardware behavior.
 ---
 
 # Quantum Math Ledger Reviewer
@@ -22,6 +22,9 @@ Review the supplied equations, code, and results as four compatible records. Pre
 - Distinguish global phase from relative phase, a wrong time, a wrong sign, or a wrong generator.
 - State hbar and other unit conventions. Do not compare times from incompatible Hamiltonian scales.
 - For product formulas, record term order, step count, error metric, exact reference, and the range supporting an empirical convergence claim.
+- When a product formula is synthesized as a circuit, distinguish left-to-right temporal gate order from right-to-left matrix multiplication, declare the SDK's Pauli-label order, and verify the factor-of-two rotation-angle convention.
+- Distinguish a Python circuit-construction loop, coherent segment repetition, target-aware transpilation, independently prepared shots, and a classical parameter sweep. Do not use the word loop as if these operations were equivalent.
+- For a channel dilation, distinguish tracing out a workspace from measuring it and retaining a classical result.
 - Distinguish a certain phase flip from complete dephasing. Record the channel parameterization instead of relying only on a channel name.
 - Use reduced-state entropy as an entanglement measure only when the joint-state assumptions justify it. A mixed reduced state alone does not prove entanglement for an arbitrary mixed joint state.
 - Label evidence as analytic, exact numerical, approximate numerical, declared-noise simulation, or hardware observation. Do not promote one level into another.
